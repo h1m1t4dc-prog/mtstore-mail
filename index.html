@@ -12,7 +12,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: #f8fafc;
+            background-color: #f0f6ff;
             color: #1e293b;
             padding: 12px;
             display: flex;
@@ -22,11 +22,11 @@
             width: 100%;
             max-width: 480px;
             background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            border-radius: 24px;
+            box-shadow: 0 12px 30px -8px rgba(37, 99, 235, 0.08);
             padding: 20px;
             overflow: hidden;
-            border: 1px solid #f1f5f9;
+            border: 1px solid #e0f2fe;
         }
         .header {
             display: flex;
@@ -36,27 +36,52 @@
             border-bottom: 1px solid #f1f5f9;
             padding-bottom: 12px;
         }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
         .logo {
             font-weight: 800;
             font-size: 18px;
-            color: #2563eb;
+            color: #1e293b;
             letter-spacing: -0.5px;
+        }
+        .domain-badge {
+            font-size: 11px;
+            color: #d97706;
+            background: #fef3c7;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
         }
         .status {
             font-size: 11px;
             background: #dcfce7;
             color: #15803d;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 5px;
         }
         .card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 14px;
+            border-radius: 16px;
             padding: 16px;
             margin-bottom: 12px;
         }
@@ -65,39 +90,47 @@
             text-transform: uppercase;
             color: #64748b;
             font-weight: 700;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .email-box-flex {
+        .email-input-group {
             display: flex;
             gap: 8px;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
         }
-        .email-display {
-            font-size: 13px;
-            font-weight: bold;
+        .prefix-box {
+            font-size: 16px;
+            font-weight: 800;
             color: #0f172a;
-            word-break: break-all;
             background: #fff;
-            padding: 10px 10px;
-            border: 1px solid #cbd5e1;
-            border-radius: 10px;
+            padding: 12px 14px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 12px;
             flex-grow: 1;
+            word-break: break-all;
         }
         select {
             background: #fff;
-            border: 1px solid #cbd5e1;
-            padding: 10px 4px;
-            border-radius: 10px;
-            font-size: 11px;
-            font-weight: 600;
-            color: #334155;
+            border: 1.5px solid #cbd5e1;
+            padding: 12px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #2563eb;
             outline: none;
             cursor: pointer;
-            max-width: 135px;
+            max-width: 145px;
         }
-        .btn-group {
+        .info-active {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+        .grid-4-btn {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 8px;
@@ -106,31 +139,56 @@
             background: #2563eb;
             color: white;
             border: none;
-            padding: 11px;
-            border-radius: 10px;
+            padding: 12px;
+            border-radius: 12px;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.2s;
-            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
         }
         button:active {
-            transform: scale(0.98);
+            transform: scale(0.97);
         }
         button.secondary {
-            background: #e2e8f0;
+            background: #ffffff;
             color: #334155;
-            box-shadow: none;
+            border: 1.5px solid #e2e8f0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
-        .action-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
+        .auto-refresh-card {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 14px;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 16px;
+        }
+        .auto-refresh-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #166534;
+        }
+        .realtime-badge {
+            background: #dcfce7;
+            color: #15803d;
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
         }
         .inbox-header {
             font-size: 14px;
-            font-weight: bold;
+            font-weight: 800;
             margin-bottom: 10px;
             color: #1e293b;
             display: flex;
@@ -138,63 +196,71 @@
             align-items: center;
         }
         
-        /* Gaya Kotak SMS / Pesan Ringkas */
+        /* SMS / OTP Card Style */
         .sms-item {
             background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 12px 14px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 14px;
             margin-bottom: 10px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 8px;
         }
         .sms-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 11px;
+            font-size: 12px;
             color: #64748b;
         }
         .sms-sender {
-            font-weight: 600;
-            color: #334155;
+            font-weight: 700;
+            color: #1e293b;
         }
         .sms-body {
             font-size: 13px;
             color: #0f172a;
             background: #f8fafc;
-            padding: 8px 10px;
-            border-radius: 8px;
+            padding: 10px 12px;
+            border-radius: 10px;
             border: 1px solid #f1f5f9;
             word-break: break-all;
             white-space: pre-wrap;
+            line-height: 1.4;
         }
         .copy-otp-btn {
             background: #10b981;
             color: white;
             border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             align-self: flex-start;
-            box-shadow: none;
+            box-shadow: 0 3px 10px rgba(16, 185, 129, 0.2);
         }
         .copy-otp-btn:active {
             background: #059669;
         }
-
         .empty-inbox {
             text-align: center;
             color: #94a3b8;
             font-size: 13px;
-            padding: 30px;
+            padding: 35px 20px;
             background: #f8fafc;
-            border-radius: 12px;
-            border: 2px dashed #e2e8f0;
+            border-radius: 16px;
+            border: 2px dashed #cbd5e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .empty-icon {
+            font-size: 28px;
+            margin-bottom: 2px;
         }
     </style>
 </head>
@@ -202,38 +268,58 @@
 
     <div class="container">
         <div class="header">
-            <div class="logo">mtstore.mail</div>
+            <div class="logo-area">
+                <div class="logo-icon">💙</div>
+                <div class="logo">mtstore.mail</div>
+            </div>
             <div class="status">● LIVE</div>
         </div>
 
         <div class="card">
-            <div class="label">Alamat Inbox</div>
-            <div class="email-box-flex">
-                <div class="email-display" id="emailAddress">Memuat...</div>
+            <div class="label">
+                <span>💌 Alamat Inbox</span>
+                <span class="domain-badge">✨ 3 Domain Aktif</span>
+            </div>
+            <div class="email-input-group">
+                <div class="prefix-box" id="prefixDisplay">memuat...</div>
                 <select id="domainSelect" onchange="changeDomain()">
                     <option value="preminmit.my.id">preminmit.my.id</option>
                     <option value="mtstorea.my.id">mtstorea.my.id</option>
                     <option value="mtstore.web.id">mtstore.web.id</option>
                 </select>
             </div>
-            <div class="btn-group">
-                <button onclick="copyEmail()">Salin Email</button>
-                <button class="secondary" onclick="generateNewEmail()">Buat Baru</button>
+            <div class="info-active">Aktif: <b id="fullEmailDisplay" style="color:#2563eb;">...</b></div>
+            
+            <div class="grid-4-btn">
+                <button onclick="copyEmail()">📋 Salin Email</button>
+                <button class="secondary" onclick="generateNewEmail()">✨ Buat Baru</button>
+                <button class="secondary" onclick="showQrCode()">📱 Kode QR</button>
+                <button class="secondary" onclick="fetchMessages()">🔄 Refresh</button>
             </div>
         </div>
 
-        <div class="action-row">
-            <button class="secondary" onclick="fetchMessages()">Refresh Manual</button>
-            <button class="secondary" onclick="clearInbox()" style="color: #dc2626;">Bersihkan Inbox</button>
+        <div class="auto-refresh-card">
+            <div class="auto-refresh-left">
+                <span>✅ Auto Refresh 3s</span>
+            </div>
+            <div class="realtime-badge">Realtime Ready ✨</div>
         </div>
 
         <div class="inbox-header">
-            <span>Pesan Masuk (SMS Style)</span>
+            <span>Pesan Masuk</span>
             <span id="msgCount" style="font-size: 12px; color: #64748b; font-weight: normal;">0 pesan</span>
         </div>
 
         <div id="inboxList">
-            <div class="empty-inbox">Belum ada pesan masuk...</div>
+            <div class="empty-inbox">
+                <div class="empty-icon">📭</div>
+                <div style="font-weight:700; color:#334155;">Belum ada pesan masuk</div>
+                <div style="font-size:11px; color:#94a3b8;">OTP atau pesan baru akan muncul otomatis secara real-time di sini.</div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 12px;">
+            <button class="secondary" onclick="clearInbox()" style="width: 100%; color: #dc2626; border-color: #fecaca; background: #fff5f5;">🗑️ Bersihkan Inbox</button>
         </div>
     </div>
 
@@ -247,12 +333,19 @@
             return domainSelect.value;
         }
 
+        function updateDisplay() {
+            if (!currentEmail) return;
+            const parts = currentEmail.split("@");
+            document.getElementById("prefixDisplay").innerText = parts[0];
+            document.getElementById("fullEmailDisplay").innerText = currentEmail;
+        }
+
         function generateNewEmail() {
             const randomId = "user" + Math.floor(1000 + Math.random() * 9000);
             const domain = getActiveDomain();
             currentEmail = `${randomId}@${domain}`;
             localStorage.setItem("tmail_current", currentEmail);
-            document.getElementById("emailAddress").innerText = currentEmail;
+            updateDisplay();
             clearInboxDataUI();
         }
 
@@ -261,7 +354,7 @@
             const domain = getActiveDomain();
             currentEmail = `${prefix}@${domain}`;
             localStorage.setItem("tmail_current", currentEmail);
-            document.getElementById("emailAddress").innerText = currentEmail;
+            updateDisplay();
             fetchMessages();
         }
 
@@ -280,12 +373,12 @@
                 }
                 if (!found) generateNewEmail();
             }
-            document.getElementById("emailAddress").innerText = currentEmail;
+            updateDisplay();
         }
 
         function copyEmail() {
             navigator.clipboard.writeText(currentEmail);
-            alert("Email berhasil disalin!");
+            alert("Email berhasil disalin: " + currentEmail);
         }
 
         function copyText(text) {
@@ -293,8 +386,18 @@
             alert("Berhasil disalin: " + text);
         }
 
+        function showQrCode() {
+            alert("Alamat Email Kamu:\n" + currentEmail);
+        }
+
         function clearInboxDataUI() {
-            document.getElementById("inboxList").innerHTML = '<div class="empty-inbox">Belum ada pesan masuk...</div>';
+            document.getElementById("inboxList").innerHTML = `
+                <div class="empty-inbox">
+                    <div class="empty-icon">📭</div>
+                    <div style="font-weight:700; color:#334155;">Belum ada pesan masuk</div>
+                    <div style="font-size:11px; color:#94a3b8;">OTP atau pesan baru akan muncul otomatis secara real-time di sini.</div>
+                </div>
+            `;
             document.getElementById("msgCount").innerText = "0 pesan";
         }
 
@@ -315,16 +418,16 @@
                         item.className = "sms-item";
                         item.innerHTML = `
                             <div class="sms-top">
-                                <span class="sms-sender">Dari: <b>${msg.from}</b></span>
+                                <span class="sms-sender">👤 Dari: <b>${msg.from}</b></span>
                             </div>
-                            <div style="font-weight: bold; font-size: 13px; color: #1d4ed8;">${msg.subject}</div>
+                            <div style="font-weight: 700; font-size: 13px; color: #1d4ed8;">📌 ${msg.subject}</div>
                             <div class="sms-body">${msg.text}</div>
-                            <button class="copy-otp-btn" onclick="copyText(\`${msg.text.replace(/"/g, '&quot;')}\`)">Salin Pesan / OTP</button>
+                            <button class="copy-otp-btn" onclick="copyText(\`${msg.text.replace(/"/g, '&quot;')}\`)">📋 Salin Pesan / OTP</button>
                         `;
                         listEl.appendChild(item);
                     });
                 } else {
-                    clearInboxDataUI();
+                    // Jangan timpa jika sudah ada isi agar tidak flicker saat auto-refresh
                 }
             } catch (e) {
                 console.error("Gagal memuat pesan", e);
@@ -341,6 +444,7 @@
             }
         }
 
+        // Auto-refresh aktif tiap 3 detik
         setInterval(fetchMessages, 3000);
         fetchMessages();
     </script>
