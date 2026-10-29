@@ -12,26 +12,27 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
-        body {
-            background: linear-gradient(180deg, #ebf4fc 0%, #e3effb 100%);
+        html, body {
+            background: linear-gradient(180deg, #dfeefb 0%, #ebf5fe 50%, #e1effc 100%) !important;
             min-height: 100vh;
             color: #1e293b;
-            padding: 18px 16px 40px 16px;
+        }
+        body {
+            padding: 20px 16px 45px 16px;
             display: flex;
             justify-content: center;
         }
         .app-wrapper {
             width: 100%;
-            max-width: 440px;
+            max-width: 430px;
+            background: transparent !important;
         }
-
-        /* HEADER */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 18px;
-            padding: 0 2px;
+            padding: 0 4px;
         }
         .logo-area {
             display: flex;
@@ -41,18 +42,18 @@
         .logo-icon {
             width: 46px;
             height: 46px;
-            background: linear-gradient(145deg, #42a5f5, #1e88e5);
+            background: linear-gradient(145deg, #4ba8f8, #1d82db);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 14px rgba(30, 136, 229, 0.28);
+            box-shadow: 0 6px 14px rgba(29, 130, 219, 0.32);
             flex-shrink: 0;
         }
         .logo-icon svg {
             width: 22px;
             height: 22px;
-            fill: #cce7ff;
+            fill: #d8eeff;
         }
         .logo-text-group {
             display: flex;
@@ -67,14 +68,14 @@
         }
         .logo-sub {
             font-size: 12px;
-            color: #1e88e5;
+            color: #1d82db;
             font-weight: 700;
             display: flex;
             align-items: center;
             gap: 4px;
         }
         .live-pill {
-            background: #ffffff;
+            background: #f4fbf8;
             color: #10b981;
             font-size: 12px;
             font-weight: 800;
@@ -83,9 +84,8 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            box-shadow: 0 4px 12px rgba(30, 136, 229, 0.06);
-            border: 1px solid #e2effa;
-            letter-spacing: 0.3px;
+            box-shadow: 0 4px 12px rgba(29, 130, 219, 0.08);
+            border: 1.5px solid #ffffff;
         }
         .live-dot {
             width: 8px;
@@ -93,16 +93,13 @@
             background: #34d399;
             border-radius: 50%;
             display: inline-block;
-            box-shadow: 0 0 6px #34d399;
         }
-
-        /* MAIN CARD */
         .main-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.94);
             border-radius: 26px;
             padding: 20px 18px;
-            box-shadow: 0 10px 25px -5px rgba(30, 136, 229, 0.07);
-            border: 1.5px solid #e1effa;
+            box-shadow: 0 12px 28px -6px rgba(29, 130, 219, 0.1);
+            border: 1.5px solid #ffffff;
             margin-bottom: 14px;
         }
         .card-top-row {
@@ -115,7 +112,7 @@
         .inbox-label {
             font-size: 12px;
             font-weight: 800;
-            color: #1e88e5;
+            color: #1d82db;
             letter-spacing: 0.5px;
             display: flex;
             align-items: center;
@@ -125,39 +122,35 @@
         .choose-domain-label {
             font-size: 12px;
             font-weight: 600;
-            color: #64748b;
-            display: flex;
-            align-items: center;
-            gap: 4px;
+            color: #7c90a6;
             cursor: pointer;
         }
-
-        /* CAPSULE INPUT BOX */
         .email-capsule {
-            background: #f2f8fd;
-            border: 1.5px solid #cfe3f7;
+            background: #eef6fd;
+            border: 1.5px solid #cde2f7;
             border-radius: 18px;
-            padding: 8px 8px 8px 16px;
+            padding: 8px 8px 8px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 8px;
+            gap: 6px;
             margin-bottom: 12px;
         }
-        .prefix-text {
-            font-size: 17px;
+        .prefix-input {
+            font-size: 16px;
             font-weight: 800;
             color: #0f172a;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            background: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
             flex: 1;
             min-width: 0;
         }
         .at-sign {
             font-size: 16px;
             font-weight: 800;
-            color: #1e88e5;
+            color: #2998f2;
             flex-shrink: 0;
         }
         .domain-select-wrapper {
@@ -168,34 +161,28 @@
             appearance: none;
             -webkit-appearance: none;
             background: #ffffff;
-            border: 1.5px solid #cbdcf0;
+            border: 1.5px solid #c8ddf2;
             border-radius: 13px;
-            padding: 9px 26px 9px 12px;
+            padding: 9px 24px 9px 11px;
             font-size: 13px;
             font-weight: 800;
-            color: #1e6ec7;
+            color: #1d72c9;
             outline: none;
             cursor: pointer;
-            max-width: 155px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            box-shadow: 0 2px 5px rgba(30, 136, 229, 0.05);
+            max-width: 152px;
         }
         .select-arrows {
             position: absolute;
-            right: 9px;
+            right: 8px;
             top: 50%;
             transform: translateY(-50%);
             pointer-events: none;
             font-size: 11px;
-            color: #334155;
+            color: #1e293b;
             font-weight: 900;
         }
-
-        /* ACTIVE EMAIL TEXT */
         .active-email-line {
-            font-size: 13px;
+            font-size: 12.5px;
             color: #7c90a6;
             font-weight: 600;
             margin-bottom: 16px;
@@ -203,11 +190,9 @@
             word-break: break-all;
         }
         .active-email-line b {
-            color: #1e88e5;
+            color: #1d82db;
             font-weight: 700;
         }
-
-        /* 2 STAT BOXES */
         .stats-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -215,18 +200,17 @@
             margin-bottom: 16px;
         }
         .stat-card {
-            background: #f9fbfd;
-            border: 1.5px solid #e6eff8;
+            background: #f6fafe;
+            border: 1.5px solid #e2effb;
             border-radius: 16px;
             padding: 12px 14px;
         }
         .stat-title {
-            font-size: 11px;
+            font-size: 10.5px;
             font-weight: 800;
-            color: #7c90a6;
+            color: #8da2b8;
             text-transform: uppercase;
             margin-bottom: 4px;
-            letter-spacing: 0.4px;
         }
         .stat-val {
             font-size: 15px;
@@ -237,10 +221,8 @@
             gap: 5px;
         }
         .stat-val .blue-num {
-            color: #1e88e5;
+            color: #1d82db;
         }
-
-        /* 4 BUTTONS GRID */
         .btn-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -256,34 +238,27 @@
             align-items: center;
             justify-content: center;
             gap: 7px;
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
             border: none;
         }
-        .btn:active {
-            transform: scale(0.97);
-        }
         .btn-primary {
-            background: linear-gradient(180deg, #329ef4 0%, #1780d6 100%);
+            background: linear-gradient(180deg, #38a3f8 0%, #1780d6 100%);
             color: #ffffff;
-            box-shadow: 0 6px 14px rgba(25, 130, 218, 0.3);
+            box-shadow: 0 6px 14px rgba(25, 130, 218, 0.32);
         }
         .btn-outline {
-            background: #f9fbfd;
+            background: #f8fbfe;
             color: #1e293b;
-            border: 1.5px solid #dce9f6;
-            box-shadow: 0 2px 6px rgba(30, 136, 229, 0.03);
+            border: 1.5px solid #dae9f8;
         }
-
-        /* AUTO REFRESH BAR */
         .refresh-bar {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.94);
             border-radius: 20px;
             padding: 12px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 8px 20px -5px rgba(30, 136, 229, 0.06);
-            border: 1.5px solid #e1effa;
+            box-shadow: 0 8px 20px -5px rgba(29, 130, 219, 0.08);
+            border: 1.5px solid #ffffff;
             margin-bottom: 20px;
         }
         .refresh-left {
@@ -306,24 +281,15 @@
             font-size: 13px;
             font-weight: 900;
         }
-        .refresh-sec {
-            color: #64748b;
-            font-weight: 600;
-        }
         .realtime-pill {
-            background: #f0f7fe;
-            border: 1px solid #d8eafc;
-            color: #1e88e5;
+            background: #eef6fd;
+            border: 1px solid #d5e8fa;
+            color: #1d82db;
             font-size: 12px;
             font-weight: 800;
             padding: 7px 14px;
             border-radius: 999px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
         }
-
-        /* INBOX SECTION HEADER */
         .section-header {
             display: flex;
             justify-content: space-between;
@@ -335,26 +301,23 @@
             font-size: 14px;
             font-weight: 800;
             color: #64748b;
-            letter-spacing: 0.6px;
             text-transform: uppercase;
         }
         .count-pill {
-            background: #e3effb;
-            color: #1e88e5;
+            background: #dcedfc;
+            color: #1d82db;
             font-size: 13px;
             font-weight: 800;
             padding: 3px 12px;
             border-radius: 999px;
         }
-
-        /* EMPTY INBOX CARD */
         .empty-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.94);
             border-radius: 26px;
             padding: 38px 24px;
             text-align: center;
-            box-shadow: 0 10px 25px -5px rgba(30, 136, 229, 0.06);
-            border: 1.5px solid #e1effa;
+            box-shadow: 0 10px 25px -5px rgba(29, 130, 219, 0.08);
+            border: 1.5px solid #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -362,8 +325,8 @@
         .mailbox-circle {
             width: 68px;
             height: 68px;
-            background: #f2f8fd;
-            border: 1.5px solid #dfeefb;
+            background: #eef6fd;
+            border: 1.5px solid #d8ebfa;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -381,18 +344,15 @@
             font-size: 13px;
             color: #7c90a6;
             line-height: 1.5;
-            max-width: 290px;
-            font-weight: 500;
+            max-width: 280px;
         }
-
-        /* SMS STYLE MESSAGE CARD */
         .sms-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.96);
             border-radius: 22px;
             padding: 16px;
             margin-bottom: 12px;
-            box-shadow: 0 8px 20px -5px rgba(30, 136, 229, 0.07);
-            border: 1.5px solid #dcebf9;
+            box-shadow: 0 8px 20px -5px rgba(29, 130, 219, 0.09);
+            border: 1.5px solid #ffffff;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -406,8 +366,8 @@
         .sms-sender {
             font-size: 12px;
             font-weight: 800;
-            color: #1e88e5;
-            background: #f0f7fe;
+            color: #1d82db;
+            background: #eef6fd;
             padding: 4px 10px;
             border-radius: 999px;
             overflow: hidden;
@@ -419,17 +379,15 @@
             font-size: 11px;
             color: #94a3b8;
             font-weight: 600;
-            flex-shrink: 0;
         }
         .sms-subject {
             font-size: 15px;
             font-weight: 800;
             color: #0f172a;
-            line-height: 1.35;
         }
         .otp-highlight-box {
-            background: #f2f8fd;
-            border: 1.5px dashed #90caf9;
+            background: #eef6fd;
+            border: 1.5px dashed #84c2f8;
             border-radius: 14px;
             padding: 10px 14px;
             display: flex;
@@ -437,33 +395,31 @@
             align-items: center;
         }
         .otp-code {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 900;
             color: #1565c0;
             letter-spacing: 2px;
         }
         .copy-otp-pill {
-            background: linear-gradient(180deg, #329ef4 0%, #1780d6 100%);
+            background: linear-gradient(180deg, #38a3f8 0%, #1780d6 100%);
             color: #ffffff;
             border: none;
             border-radius: 999px;
-            padding: 7px 14px;
-            font-size: 12px;
+            padding: 8px 16px;
+            font-size: 13px;
             font-weight: 800;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(25, 130, 218, 0.25);
         }
         .sms-snippet {
-            font-size: 13px;
-            color: #475569;
-            background: #f9fbfd;
-            padding: 10px 12px;
-            border-radius: 12px;
-            border: 1px solid #edf4fb;
-            line-height: 1.45;
+            font-size: 12px;
+            color: #64748b;
+            background: #f8fbfe;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid #e5f0fa;
             word-break: break-word;
-            overflow-wrap: anywhere;
-            max-height: 95px;
+            max-height: 70px;
             overflow-y: auto;
         }
         .clear-btn-wrap {
@@ -473,14 +429,12 @@
         .clear-link {
             background: none;
             border: none;
-            color: #94a3b8;
+            color: #64748b;
             font-size: 12px;
             font-weight: 700;
             cursor: pointer;
             text-decoration: underline;
         }
-
-        /* QR MODAL */
         .modal-bg {
             display: none;
             position: fixed;
@@ -499,14 +453,12 @@
             max-width: 320px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
     </style>
 </head>
 <body>
 
     <div class="app-wrapper">
-        <!-- HEADER -->
         <div class="header">
             <div class="logo-area">
                 <div class="logo-icon">
@@ -524,17 +476,14 @@
             </div>
         </div>
 
-        <!-- MAIN CARD -->
         <div class="main-card">
             <div class="card-top-row">
                 <div class="inbox-label">💌 ALAMAT INBOX</div>
-                <div class="choose-domain-label" onclick="document.getElementById('domainSelect').focus()">
-                    Pilih Domain ⚙️
-                </div>
+                <div class="choose-domain-label" onclick="document.getElementById('domainSelect').focus()">Pilih Domain ⚙️</div>
             </div>
 
             <div class="email-capsule">
-                <div class="prefix-text" id="prefixDisplay">5p249fr</div>
+                <input type="text" class="prefix-input" id="prefixInput" value="nabila24" spellcheck="false" autocomplete="off" oninput="onCustomPrefixInput()">
                 <div class="at-sign">@</div>
                 <div class="domain-select-wrapper">
                     <select class="domain-select" id="domainSelect" onchange="changeDomain()">
@@ -547,7 +496,7 @@
             </div>
 
             <div class="active-email-line">
-                Aktif: <b id="fullEmailDisplay">5p249fr@preminmit.my.id</b>
+                Aktif: <b id="fullEmailDisplay">nabila24@preminmit.my.id</b>
             </div>
 
             <div class="stats-row">
@@ -565,26 +514,23 @@
                 <button class="btn btn-primary" onclick="copyEmail()">📋 Salin Email</button>
                 <button class="btn btn-outline" onclick="generateNewEmail()">✨ Buat Baru</button>
                 <button class="btn btn-outline" onclick="showQrModal()">📱 Kode QR</button>
-                <button class="btn btn-outline" onclick="fetchMessages(true)">🔄 Refresh</button>
+                <button class="btn btn-outline" onclick="fetchMessages()">🔄 Refresh</button>
             </div>
         </div>
 
-        <!-- AUTO REFRESH CARD -->
         <div class="refresh-bar">
             <div class="refresh-left">
                 <span class="check-badge">✓</span>
-                <span>Auto Refresh <span class="refresh-sec">5s</span></span>
+                <span>Auto Refresh <span class="refresh-sec">3s</span></span>
             </div>
             <div class="realtime-pill">Realtime Ready ✨</div>
         </div>
 
-        <!-- INBOX HEADER -->
         <div class="section-header">
             <div class="section-title">PESAN MASUK</div>
             <div class="count-pill" id="badgeCount">0</div>
         </div>
 
-        <!-- INBOX LIST -->
         <div id="inboxList">
             <div class="empty-card">
                 <div class="mailbox-circle">📫</div>
@@ -598,12 +544,11 @@
         </div>
     </div>
 
-    <!-- QR MODAL -->
     <div class="modal-bg" id="qrModal" onclick="closeQrModal()">
         <div class="modal-box" onclick="event.stopPropagation()">
             <div style="font-weight:800; font-size:16px; margin-bottom:12px; color:#0f172a;">Kode QR Email</div>
             <img id="qrImage" src="" alt="QR Code" style="width:180px; height:180px; border-radius:12px; border:1px solid #e2e8f0; margin-bottom:12px;">
-            <div id="qrEmailText" style="font-size:13px; font-weight:700; color:#1e88e5; word-break:break-all; margin-bottom:16px;"></div>
+            <div id="qrEmailText" style="font-size:13px; font-weight:700; color:#1d82db; word-break:break-all; margin-bottom:16px;"></div>
             <button class="btn btn-primary" style="width:100%;" onclick="closeQrModal()">Tutup</button>
         </div>
     </div>
@@ -611,21 +556,24 @@
     <script>
         const WORKER_URL = "https://tmail-ku.h1m1t4dc.workers.dev";
         const domainSelect = document.getElementById("domainSelect");
-        let currentEmail = localStorage.getItem("tmail_current");
+        const prefixInput = document.getElementById("prefixInput");
 
-        function randomPrefix() {
-            const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-            let str = "";
-            for (let i = 0; i < 7; i++) {
-                str += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            return str;
+        const HUMAN_NAMES = ["nabila", "putri", "zahra", "aisyah", "amanda", "salsa", "nadia", "tiara", "syifa", "amelia", "citra", "kirana", "intan", "rehan", "rizky", "dimas", "fajar", "bagas", "aditya", "farhan", "kevin", "alvin", "gilang", "daffa", "aurel", "vania", "clara", "melisa", "karina", "mita", "raka", "bayu", "arya", "dika", "hafiz"];
+
+        function generateHumanPrefix() {
+            const name = HUMAN_NAMES[Math.floor(Math.random() * HUMAN_NAMES.length)];
+            const num = Math.floor(10 + Math.random() * 89);
+            return `${name}${num}`;
         }
+
+        let currentEmail = localStorage.getItem("tmail_current_v5");
 
         function updateUIEmail() {
             if (!currentEmail) return;
             const parts = currentEmail.split("@");
-            document.getElementById("prefixDisplay").innerText = parts[0];
+            if (document.activeElement !== prefixInput) {
+                prefixInput.value = parts[0];
+            }
             document.getElementById("fullEmailDisplay").innerText = currentEmail;
         }
 
@@ -643,10 +591,11 @@
         }
 
         async function generateNewEmail() {
-            const prefix = randomPrefix();
+            const prefix = generateHumanPrefix();
             const domain = domainSelect.value;
             currentEmail = `${prefix}@${domain}`;
-            localStorage.setItem("tmail_current", currentEmail);
+            localStorage.setItem("tmail_current_v5", currentEmail);
+            prefixInput.value = prefix;
             updateUIEmail();
             renderEmptyInbox();
             try {
@@ -654,17 +603,30 @@
             } catch (e) {}
         }
 
+        function onCustomPrefixInput() {
+            const cleanPrefix = prefixInput.value.toLowerCase().replace(/[^a-z0-9._-]/g, "");
+            if (prefixInput.value !== cleanPrefix) {
+                prefixInput.value = cleanPrefix;
+            }
+            const finalPrefix = cleanPrefix || "nabila";
+            const domain = domainSelect.value;
+            currentEmail = `${finalPrefix}@${domain}`;
+            localStorage.setItem("tmail_current_v5", currentEmail);
+            document.getElementById("fullEmailDisplay").innerText = currentEmail;
+            fetchMessages();
+        }
+
         function changeDomain() {
-            const prefix = currentEmail ? currentEmail.split("@")[0] : randomPrefix();
+            const prefix = prefixInput.value.trim() || generateHumanPrefix();
             const domain = domainSelect.value;
             currentEmail = `${prefix}@${domain}`;
-            localStorage.setItem("tmail_current", currentEmail);
+            localStorage.setItem("tmail_current_v5", currentEmail);
             updateUIEmail();
             renderEmptyInbox();
             fetchMessages();
         }
 
-        if (!currentEmail || !currentEmail.includes("@")) {
+        if (!currentEmail || !currentEmail.includes("@") || currentEmail.startsWith("user")) {
             generateNewEmail();
         } else {
             const savedDomain = currentEmail.split("@")[1];
@@ -678,7 +640,7 @@
             }
             if (!matched) {
                 currentEmail = `${currentEmail.split("@")[0]}@${domainSelect.value}`;
-                localStorage.setItem("tmail_current", currentEmail);
+                localStorage.setItem("tmail_current_v5", currentEmail);
             }
             updateUIEmail();
         }
@@ -690,7 +652,7 @@
 
         function copyOtpText(txt) {
             navigator.clipboard.writeText(txt);
-            alert("Berhasil disalin: " + txt);
+            alert("OTP berhasil disalin: " + txt);
         }
 
         function showQrModal() {
@@ -704,22 +666,13 @@
             document.getElementById("qrModal").style.display = "none";
         }
 
-        function extractCleanSMS(rawText, subject) {
-            const combined = (subject + " " + rawText);
-            const otpMatch = combined.match(/\b(\d{4,8})\b/);
-            const otp = otpMatch ? otpMatch[1] : null;
-
-            // Buang header teknis panjang (Received: from, ARC-Seal, dsb) jika terikut
-            let cleanBody = rawText;
-            const headerSplit = cleanBody.split(/x-gm-message-state:|mime-version:|content-type:/i);
-            if (headerSplit.length > 1) {
-                cleanBody = headerSplit[headerSplit.length - 1];
+        function parseOTP(subject, rawText) {
+            const searchTarget = (subject + " " + rawText);
+            const matches = searchTarget.match(/\b\d{4,8}\b/g);
+            if (matches && matches.length > 0) {
+                return matches[0];
             }
-            cleanBody = cleanBody.replace(/Received: from[\s\S]*?(?=\n\n|\r\n\r\n|$)/gi, "").trim();
-            if (cleanBody.length > 220) {
-                cleanBody = cleanBody.substring(0, 220) + "...";
-            }
-            return { otp, cleanBody: cleanBody || subject };
+            return null;
         }
 
         async function fetchMessages() {
@@ -739,7 +692,9 @@
                     listEl.innerHTML = "";
 
                     data.messages.forEach(msg => {
-                        const { otp, cleanBody } = extractCleanSMS(msg.text || "", msg.subject || "");
+                        const subject = msg.subject || "(Pesan Masuk)";
+                        const rawText = msg.text || "";
+                        const otp = parseOTP(subject, rawText);
                         const timeStr = msg.timestamp ? new Date(msg.timestamp).toLocaleTimeString("id-ID", { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : "Baru saja";
 
                         const card = document.createElement("div");
@@ -749,7 +704,7 @@
                                 <div class="sms-sender">✉️ ${msg.from || "Pengirim"}</div>
                                 <div class="sms-time">${timeStr}</div>
                             </div>
-                            <div class="sms-subject">${msg.subject || "(Pesan Masuk)"}</div>
+                            <div class="sms-subject">${subject}</div>
                             ${otp ? `
                             <div class="otp-highlight-box">
                                 <div>
@@ -758,12 +713,8 @@
                                 </div>
                                 <button class="copy-otp-pill" onclick="copyOtpText('${otp}')">📋 Salin OTP</button>
                             </div>
-                            ` : `
-                            <div>
-                                <button class="copy-otp-pill" onclick="copyOtpText(\`${cleanBody.replace(/`/g, '')}\`)">📋 Salin Isi Pesan</button>
-                            </div>
-                            `}
-                            <div class="sms-snippet">${cleanBody}</div>
+                            ` : ''}
+                            <div class="sms-snippet">${rawText.substring(0, 150)}...</div>
                         `;
                         listEl.appendChild(card);
                     });
@@ -782,7 +733,7 @@
             } catch (e) {}
         }
 
-        setInterval(fetchMessages, 5000);
+        setInterval(fetchMessages, 3000);
         fetchMessages();
     </script>
 </body>
