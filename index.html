@@ -11,8 +11,6 @@
     .cute-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); border: 1.5px solid rgba(186, 230, 253, 0.8); box-shadow: 0 12px 35px -6px rgba(56, 189, 248, 0.15); }
     .btn-cute-primary { background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%); box-shadow: 0 6px 16px -3px rgba(2, 132, 199, 0.35); }
     .sub-box { background: #F8FAFC; border: 1px solid #E2E8F0; }
-    .domain-pill { transition: all 0.2s ease; }
-    .domain-pill.active { background: #0284C7; color: white; border-color: #0284C7; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3); }
   </style>
 </head>
 <body class="min-h-screen p-4 flex flex-col items-center justify-center pb-12">
@@ -36,34 +34,27 @@
     <!-- Main Control Card -->
     <div class="cute-card rounded-[32px] p-5 space-y-4">
       
-      <!-- Top Section Inside Card -->
       <div class="flex items-center justify-between px-1">
         <span class="text-[11px] font-extrabold text-sky-600 uppercase tracking-wider flex items-center gap-1">
           <span>💌</span> Alamat Inbox
         </span>
-        <span class="text-[11px] font-bold text-slate-400 cursor-pointer hover:text-sky-600 transition" onclick="toggleDomainSelect()">Atur Domain ⚙️</span>
+        <span class="text-[11px] font-bold text-slate-400">Pilih Domain ⚙️</span>
       </div>
 
       <!-- Input Custom Username & Domain Dropdown -->
       <div class="space-y-2">
         <div class="flex items-center gap-2 bg-sky-50/80 border border-sky-200/90 rounded-2xl p-2 shadow-inner">
-          <input type="text" id="userInput" value="mtstore" class="w-1/2 bg-transparent text-sm font-bold text-slate-700 outline-none px-2">
+          <input type="text" id="userInput" value="29nyoxa" class="w-1/2 bg-transparent text-sm font-bold text-slate-700 outline-none px-2" oninput="updateEmailDisplay()">
           <span class="text-sky-400 font-bold">@</span>
-          <select id="domainSelect" class="w-1/2 bg-white border border-sky-200 rounded-xl text-xs font-bold text-sky-700 p-2.5 outline-none shadow-sm cursor-pointer">
+          <select id="domainSelect" class="w-1/2 bg-white border border-sky-200 rounded-xl text-xs font-bold text-sky-700 p-2.5 outline-none shadow-sm cursor-pointer" onchange="updateEmailDisplay()">
             <option value="mtstorea.my.id">mtstorea.my.id</option>
             <option value="mtstoreku.web.id">mtstoreku.web.id</option>
             <option value="preminmit.my.id">preminmit.my.id</option>
           </select>
         </div>
 
-        <!-- Quick Domain Pills (D1, D2, D3) -->
-        <div class="flex items-center justify-between px-1 pt-0.5">
-          <span class="text-[10px] text-slate-400 font-medium">Aktif: <span id="activeEmail" class="font-bold text-sky-600">mtstore@mtstorea.my.id</span></span>
-          <div class="flex gap-1.5">
-            <button onclick="setDomainByIndex(0)" id="pill0" class="domain-pill active text-[10px] font-extrabold px-2.5 py-0.5 rounded-lg border border-sky-200 bg-white text-sky-700">D1</button>
-            <button onclick="setDomainByIndex(1)" id="pill1" class="domain-pill text-[10px] font-extrabold px-2.5 py-0.5 rounded-lg border border-sky-200 bg-white text-sky-700">D2</button>
-            <button onclick="setDomainByIndex(2)" id="pill2" class="domain-pill text-[10px] font-extrabold px-2.5 py-0.5 rounded-lg border border-sky-200 bg-white text-sky-700">D3</button>
-          </div>
+        <div class="px-1 pt-0.5">
+          <span class="text-[10px] text-slate-400 font-medium">Aktif: <span id="activeEmail" class="font-bold text-sky-600">29nyoxa@mtstorea.my.id</span></span>
         </div>
       </div>
 
@@ -79,25 +70,19 @@
         </div>
       </div>
 
-      <!-- Action Buttons Grid (Super Complete) -->
+      <!-- Action Buttons Grid (Clean & Active QR) -->
       <div class="grid grid-cols-2 gap-2.5">
-        <button onclick="copyEmail()" class="btn-cute-primary text-white text-xs font-bold py-3 rounded-2xl hover:opacity-95 transition flex items-center justify-center gap-1.5">
+        <button onclick="copyEmail()" class="btn-cute-primary text-white text-xs font-bold py-3 rounded-2xl hover:opacity-95 transition flex items-center justify-center gap-1.5 shadow-md">
           📋 Salin Email
         </button>
         <button onclick="generateRandom()" class="sub-box hover:bg-sky-50 text-sky-700 text-xs font-bold py-3 rounded-2xl transition shadow-sm border border-sky-200">
           ✨ Buat Baru
         </button>
-        <button onclick="alert('Fitur QR Code')" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
+        <button onclick="showQRCode()" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
           📱 Kode QR
         </button>
-        <button onclick="refreshInbox()" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
+        <button onclick="fetchInbox()" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
           🔄 Refresh
-        </button>
-        <button onclick="alert('Email dikunci dengan PIN')" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
-          🔒 Kunci PIN
-        </button>
-        <button onclick="clearInbox()" class="bg-rose-50/70 hover:bg-rose-100 text-rose-600 border border-rose-200 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1 shadow-sm">
-          🗑️ Hapus
         </button>
       </div>
     </div>
@@ -111,62 +96,61 @@
       <span class="text-[10px] bg-sky-50 text-sky-600 font-extrabold px-2.5 py-1 rounded-full border border-sky-100">Realtime Ready ✨</span>
     </div>
 
-    <!-- Empty Inbox Section -->
+    <!-- Inbox List Section -->
     <div class="space-y-2">
       <div class="flex items-center justify-between px-2">
         <span class="text-xs font-extrabold text-slate-400 uppercase tracking-wider">Pesan Masuk</span>
-        <span class="text-xs font-extrabold text-sky-600 bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-100">0</span>
+        <span id="badgeCount" class="text-xs font-extrabold text-sky-600 bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-100">0</span>
       </div>
 
-      <div class="cute-card rounded-[32px] p-8 text-center space-y-3">
-        <div class="w-14 h-14 bg-sky-50 rounded-full flex items-center justify-center mx-auto text-2xl shadow-inner border border-sky-100">📭</div>
-        <div class="space-y-1">
-          <p class="text-xs font-bold text-slate-700">Belum ada pesan masuk</p>
-          <p class="text-[11px] text-slate-400">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</p>
+      <div id="inboxContainer" class="space-y-3">
+        <!-- Default Empty State -->
+        <div class="cute-card rounded-[32px] p-8 text-center space-y-3" id="emptyState">
+          <div class="w-14 h-14 bg-sky-50 rounded-full flex items-center justify-center mx-auto text-2xl shadow-inner border border-sky-100">📭</div>
+          <div class="space-y-1">
+            <p class="text-xs font-bold text-slate-700">Belum ada pesan masuk</p>
+            <p class="text-[11px] text-slate-400">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</p>
+          </div>
         </div>
       </div>
     </div>
 
   </div>
 
+  <!-- QR Modal (Hidden by default) -->
+  <div id="qrModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="cute-card bg-white rounded-3xl p-6 max-w-xs w-full text-center space-y-4 shadow-2xl">
+      <h3 class="font-extrabold text-sm text-slate-800">QR Code Alamat Email</h3>
+      <div id="qrcode" class="bg-white p-3 rounded-2xl inline-block border border-sky-100 shadow-inner">
+        <img id="qrImg" src="" alt="QR Code" class="w-48 h-48 mx-auto rounded-lg">
+      </div>
+      <p id="qrEmailText" class="text-xs font-bold text-sky-600 break-all"></p>
+      <button onclick="closeQRCode()" class="w-full btn-cute-primary text-white text-xs font-bold py-2.5 rounded-xl">Tutup</button>
+    </div>
+  </div>
+
   <script>
-    const domains = ['mtstorea.my.id', 'mtstoreku.web.id', 'preminmit.my.id'];
     const userInput = document.getElementById('userInput');
     const domainSelect = document.getElementById('domainSelect');
     const activeEmail = document.getElementById('activeEmail');
+    const msgCount = document.getElementById('msgCount');
+    const badgeCount = document.getElementById('badgeCount');
+    const inboxContainer = document.getElementById('inboxContainer');
+    const emptyState = document.getElementById('emptyState');
+
+    function getActiveEmail() {
+      return `${(userInput.value || 'mymail').trim().toLowerCase()}@${domainSelect.value}`;
+    }
 
     function updateEmailDisplay() {
-      const fullEmail = `${userInput.value || 'mymail'}@${domainSelect.value}`;
-      activeEmail.textContent = fullEmail;
-    }
-
-    userInput.addEventListener('input', updateEmailDisplay);
-    domainSelect.addEventListener('change', (e) => {
-      updateEmailDisplay();
-      updatePillsActiveState();
-    });
-
-    function setDomainByIndex(index) {
-      domainSelect.selectedIndex = index;
-      updateEmailDisplay();
-      updatePillsActiveState();
-    }
-
-    function updatePillsActiveState() {
-      const selectedVal = domainSelect.value;
-      domains.forEach((dom, idx) => {
-        const pill = document.getElementById(`pill${idx}`);
-        if (dom === selectedVal) {
-          pill.classList.add('active');
-        } else {
-          pill.classList.remove('active');
-        }
-      });
+      activeEmail.textContent = getActiveEmail();
+      fetchInbox();
     }
 
     function copyEmail() {
-      navigator.clipboard.writeText(activeEmail.textContent);
-      alert('Email berhasil disalin: ' + activeEmail.textContent);
+      const email = getActiveEmail();
+      navigator.clipboard.writeText(email);
+      alert('Email berhasil disalin: ' + email);
     }
 
     function generateRandom() {
@@ -175,16 +159,83 @@
       updateEmailDisplay();
     }
 
-    function refreshInbox() {
-      alert('Kotak masuk diperbarui. Belum ada pesan baru.');
+    function showQRCode() {
+      const email = getActiveEmail();
+      document.getElementById('qrEmailText').textContent = email;
+      document.getElementById('qrImg').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(email)}`;
+      document.getElementById('qrModal').classList.remove('hidden');
+      document.getElementById('qrModal').classList.add('flex');
     }
 
-    function clearInbox() {
-      alert('Kotak masuk dikosongkan.');
+    function closeQRCode() {
+      document.getElementById('qrModal').classList.remove('flex');
+      document.getElementById('qrModal').classList.add('hidden');
     }
+
+    // Fungsi untuk menarik data email dari KV Cloudflare secara otomatis
+    async function fetchInbox() {
+      const email = getActiveEmail();
+      const username = email.split('@')[0];
+
+      try {
+        // Mengambil data dari Worker KV (pastikan domain Worker kamu sudah mengarah ke endpoint reader KV atau worker reader khusus)
+        // Catatan: Ganti URL di bawah dengan endpoint Worker baca KV kamu jika dipisah, atau gunakan Worker handler yang sama.
+        // Untuk saat ini kita fetch langsung dari KV binding via API worker reader atau Worker get.
+        const response = await fetch(`https://odd-shape-7a2a.h1m1t4dc.workers.dev/api/get?email=${encodeURIComponent(email)}`);
+        if (!response.ok) return;
+        
+        const data = await response.json();
+        renderMessages(data);
+      } catch (e) {
+        // Fallback senyap jika fetch kosong/belum ada endpoint reader khusus
+      }
+    }
+
+    function renderMessages(messages) {
+      if (!messages || messages.length === 0) {
+        msgCount.textContent = '0';
+        badgeCount.textContent = '0';
+        if (!document.getElementById('emptyState')) {
+          inboxContainer.innerHTML = `
+            <div class="cute-card rounded-[32px] p-8 text-center space-y-3" id="emptyState">
+              <div class="w-14 h-14 bg-sky-50 rounded-full flex items-center justify-center mx-auto text-2xl shadow-inner border border-sky-100">📭</div>
+              <div class="space-y-1">
+                <p class="text-xs font-bold text-slate-700">Belum ada pesan masuk</p>
+                <p class="text-[11px] text-slate-400">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</p>
+              </div>
+            </div>`;
+        }
+        return;
+      }
+
+      msgCount.textContent = messages.length;
+      badgeCount.textContent = messages.length;
+
+      let html = '';
+      messages.forEach(msg => {
+        html += `
+          <div class="cute-card rounded-2xl p-4 space-y-2 shadow-sm border border-sky-100">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-extrabold text-sky-600 bg-sky-50 px-2 py-0.5 rounded-md truncate max-w-[180px]">Dari: ${msg.from}</span>
+              <span class="text-[10px] text-slate-400 font-medium">${msg.date}</span>
+            </div>
+            <h4 class="text-xs font-extrabold text-slate-800">${msg.subject}</h4>
+            <p class="text-[11px] text-slate-600 bg-sky-50/50 p-2.5 rounded-xl border border-sky-100/60 whitespace-pre-line leading-relaxed">${msg.body}</p>
+          </div>
+        `;
+      });
+      inboxContainer.innerHTML = html;
+    }
+
+    // Auto Refresh Loop tiap 5 detik jika toggle aktif
+    setInterval(() => {
+      const toggle = document.getElementById('autoRefreshToggle');
+      if (toggle && toggle.checked) {
+        fetchInbox();
+      }
+    }, 5000);
 
     updateEmailDisplay();
-    updatePillsActiveState();
   </script>
 </body>
 </html>
