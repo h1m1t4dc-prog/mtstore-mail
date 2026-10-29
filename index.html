@@ -36,11 +36,11 @@
             </div>
             
             <div class="flex gap-2 bg-slate-50/80 border border-slate-200/80 rounded-2xl p-1.5 focus-within:border-blue-500 focus-within:bg-white transition">
-                <input type="text" id="prefix" placeholder="nama" class="flex-1 bg-transparent px-3 py-1.5 text-sm font-semibold text-slate-700 focus:outline-none">
+                <input type="text" id="prefix" value="fast860" placeholder="nama" class="flex-1 bg-transparent px-3 py-1.5 text-sm font-semibold text-slate-700 focus:outline-none">
                 <select id="domain" class="bg-white border border-slate-200 rounded-xl px-2.5 py-1.5 text-xs font-semibold text-blue-600 focus:outline-none shadow-sm">
                     <option value="mtstorea.my.id">mtstorea.my.id</option>
                     <option value="mtstoreku.web.id">mtstoreku.web.id</option>
-                    <option value="preminmit.my.id">preminmit.my.id</option>
+                    <option value="preminmit.my.id" selected>preminmit.my.id</option>
                 </select>
             </div>
             <p id="full-email-label" class="text-[11px] text-slate-400 mt-1.5 px-1 font-medium truncate">Aktif: memuat...</p>
@@ -66,7 +66,7 @@
             <button onclick="generateRandom()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-2.5 px-4 rounded-2xl text-xs transition flex items-center justify-center gap-2">
                 <i class="fa-solid fa-wand-magic-sparkles text-amber-500"></i> Buat Baru
             </button>
-            <button onclick="showQRCode()" class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 text-slate-700 font-semibold py-2.5 px-4 rounded-2xl text-xs transition flex items-center justify-center gap-2">
+            <button onclick="copyEmail()" class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 text-slate-700 font-semibold py-2.5 px-4 rounded-2xl text-xs transition flex items-center justify-center gap-2">
                 <i class="fa-solid fa-qrcode text-slate-500"></i> Kode QR
             </button>
             <button onclick="fetchInbox()" class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 text-slate-700 font-semibold py-2.5 px-4 rounded-2xl text-xs transition flex items-center justify-center gap-2">
@@ -128,7 +128,7 @@
 
         function generateRandom() {
             const rand = Math.floor(1000 + Math.random() * 9000);
-            prefixInput.value = "user" + rand;
+            prefixInput.value = "fast" + rand;
             updateLabel();
             fetchInbox();
         }
@@ -137,11 +137,6 @@
             const email = getFullEmail();
             navigator.clipboard.writeText(email);
             alert("Berhasil menyalin email: " + email);
-        }
-
-        function showQRCode() {
-            const email = getFullEmail();
-            alert("Email kamu: " + email);
         }
 
         async function fetchInbox() {
@@ -182,7 +177,6 @@
             }
         }
 
-        // Set default awal
         if (!prefixInput.value) {
             prefixInput.value = "fast860";
         }
@@ -191,7 +185,6 @@
         prefixInput.addEventListener("input", () => { updateLabel(); fetchInbox(); });
         domainSelect.addEventListener("change", () => { updateLabel(); fetchInbox(); });
 
-        // Auto-refresh interval (3 detik jika dicentang)
         setInterval(() => {
             if (autoRefreshToggle.checked) {
                 fetchInbox();
