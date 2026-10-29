@@ -195,8 +195,6 @@
             justify-content: space-between;
             align-items: center;
         }
-        
-        /* SMS / OTP Card Style */
         .sms-item {
             background: #ffffff;
             border: 1.5px solid #e2e8f0;
@@ -426,8 +424,6 @@
                         `;
                         listEl.appendChild(item);
                     });
-                } else {
-                    // Jangan timpa jika sudah ada isi agar tidak flicker saat auto-refresh
                 }
             } catch (e) {
                 console.error("Gagal memuat pesan", e);
