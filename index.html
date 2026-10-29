@@ -4,194 +4,239 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mtstore.mail - Temporary Email</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 20px;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 18px;
+            color: #2563eb;
+        }
+        .status {
+            font-size: 12px;
+            background: #dcfce7;
+            color: #15803d;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .email-display {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1e293b;
+            word-break: break-all;
+            margin-bottom: 10px;
+        }
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:active {
+            background: #1d4ed8;
+        }
+        button.secondary {
+            background: #e2e8f0;
+            color: #334155;
+        }
+        .inbox-header {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1e293b;
+            display: flex;
+            justify-content: space-between;
+        }
+        .message-item {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            word-break: break-all;
+            overflow-wrap: break-word;
+        }
+        .message-sender {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+        .message-text {
+            font-size: 13px;
+            color: #0f172a;
+            white-space: pre-wrap;
+            line-height: 1.4;
+        }
+        .empty-inbox {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+            padding: 20px;
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50 min-h-screen text-slate-800 flex flex-col items-center justify-start p-4">
+<body>
 
-    <!-- Header Logo -->
-    <div class="w-full max-w-md flex justify-between items-center mt-3 mb-4 px-2">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-gradient-to-tr from-blue-500 to-sky-400 rounded-2xl flex items-center justify-center text-white shadow-md shadow-blue-200">
-                <i class="fa-solid fa-heart text-lg"></i>
-            </div>
-            <div>
-                <h1 class="text-base font-bold text-slate-800 tracking-tight">mtstore.mail</h1>
-                <p class="text-[11px] font-medium text-blue-600">✨ 3 Domain Aktif</p>
+    <div class="container">
+        <div class="header">
+            <div class="logo">mtstore.mail</div>
+            <div class="status">● LIVE</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Alamat Inbox</div>
+            <div class="email-display" id="emailAddress">Memuat...</div>
+            <div class="btn-group">
+                <button onclick="copyEmail()">Salin Email</button>
+                <button class="secondary" onclick="generateNewEmail()">Buat Baru</button>
             </div>
         </div>
-        <div class="bg-emerald-50 border border-emerald-100 text-emerald-600 text-[11px] font-semibold px-3 py-1 rounded-full shadow-sm flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> LIVE
+
+        <div class="card">
+            <div class="btn-group" style="margin-top:0;">
+                <button class="secondary" onclick="fetchMessages()">Refresh Manual</button>
+                <button class="secondary" onclick="clearInbox()">Bersihkan Inbox</button>
+            </div>
+        </div>
+
+        <div class="inbox-header">
+            <span>Pesan Masuk</span>
+            <span id="msgCount">0 pesan</span>
+        </div>
+
+        <div id="inboxList">
+            <div class="empty-inbox">Belum ada pesan masuk...</div>
         </div>
     </div>
 
-    <!-- Main Container Card -->
-    <div class="w-full max-w-md bg-white/80 backdrop-blur-md shadow-xl shadow-blue-500/5 rounded-3xl p-5 border border-white">
-        
-        <!-- Alamat Inbox Section -->
-        <div class="mb-4">
-            <div class="flex justify-between items-center mb-1.5 px-1">
-                <span class="text-[11px] font-bold text-slate-500 tracking-wider uppercase">💌 Alamat Inbox</span>
-                <span class="text-[11px] text-slate-400 font-medium">Pilih Domain ⚙️</span>
-            </div>
-            
-            <div class="flex gap-2 bg-slate-50/80 border border-slate-200/80 rounded-2xl p-1.5 focus-within:border-blue-500 focus-within:bg-white transition">
-                <input type="text" id="prefix" value="fast860" placeholder="nama" class="flex-1 bg-transparent px-3 py-1.5 text-sm font-semibold text-slate-700 focus:outline-none">
-                <select id="domain" class="bg-white border border-slate-200 rounded-xl px-2.5 py-1.5 text-xs font-semibold text-blue-600 focus:outline-none shadow-sm">
-                    <option value="mtstorea.my.id">mtstorea.my.id</option>
-                    <option value="mtstoreku.web.id">mtstoreku.web.id</option>
-                    <option value="preminmit.my.id" selected>preminmit.my.id</option>
-                </select>
-            </div>
-            <p id="full-email-label" class="text-[11px] text-slate-400 mt-1.5 px-1 font-medium truncate">Aktif: memuat...</p>
-        </div>
-
-        <!-- Info Grid (Masa Aktif & Kotak Masuk) -->
-        <div class="grid grid-cols-2 gap-2.5 mb-4">
-            <div class="bg-slate-50/80 border border-slate-200/60 rounded-2xl p-3 text-left">
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">Masa Aktif</span>
-                <span class="text-xs font-bold text-slate-700 flex items-center gap-1">Permanen <span class="text-blue-500">💙</span></span>
-            </div>
-            <div class="bg-slate-50/80 border border-slate-200/60 rounded-2xl p-3 text-left">
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">Kotak Masuk</span>
-                <span id="count" class="text-xs font-bold text-slate-700">0 pesan</span>
-            </div>
-        </div>
-
-        <!-- Action Buttons Grid -->
-        <div class="grid grid-cols-2 gap-2.5 mb-5">
-            <button onclick="copyEmail()" class="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold py-2.5 px-4 rounded-2xl text-xs shadow-md shadow-blue-500/20 transition flex items-center justify-center gap-2">
-                <i class="fa-regular fa-copy"></i> Salin Email
-            </button>
-            <button onclick="generateRandom()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-2.5 px-4 rounded-2xl text-xs transition flex items-center justify-center gap-2">
-                <i class="fa-solid fa-wand-magic-sparkles text-amber-500"></i> Buat Baru
-            </button>
-            <button onclick="copyEmail()" class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 text-slate-700 font-semibold py-2.5 px-4 rounded-2xl text-xs transition flex items-center justify-center gap-2">
-                <i class="fa-solid fa-qrcode text-slate-500"></i> Kode QR
-            </button>
-            <button onclick="fetchInbox()" class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 text-slate-700 font-semibold py-2.5 px-4 rounded-2xl text-xs transition flex items-center justify-center gap-2">
-                <i class="fa-solid fa-rotate text-blue-500"></i> Refresh
-            </button>
-        </div>
-    </div>
-
-    <!-- Realtime Status Bar -->
-    <div class="w-full max-w-md bg-white/80 backdrop-blur-md shadow-lg shadow-blue-500/5 rounded-2xl p-3.5 my-3 border border-white flex justify-between items-center">
-        <label class="flex items-center gap-2.5 cursor-pointer">
-            <input type="checkbox" id="auto-refresh-toggle" checked class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500 border-slate-300">
-            <span class="text-xs font-semibold text-slate-700">Auto Refresh <span class="text-slate-400 font-normal">3s</span></span>
-        </label>
-        <div class="text-[11px] font-bold text-amber-600 bg-amber-50 border border-amber-100 px-3 py-1 rounded-xl flex items-center gap-1.5 shadow-sm">
-            Realtime Ready ✨
-        </div>
-    </div>
-
-    <!-- Pesan Masuk Section -->
-    <div class="w-full max-w-md bg-white/80 backdrop-blur-md shadow-xl shadow-blue-500/5 rounded-3xl p-5 border border-white mb-8">
-        <div class="flex justify-between items-center mb-4 px-1">
-            <h2 class="text-xs font-bold text-slate-400 tracking-wider uppercase">Pesan Masuk</h2>
-            <span id="badge-count" class="text-xs font-bold text-slate-700">0</span>
-        </div>
-
-        <div id="inbox-list" class="space-y-3">
-            <div class="text-center py-10 px-4">
-                <div class="w-14 h-14 bg-sky-50 text-blue-500 rounded-3xl flex items-center justify-center mx-auto mb-3 shadow-inner">
-                    <i class="fa-solid fa-envelope-open-text text-xl"></i>
-                </div>
-                <h3 class="text-sm font-bold text-slate-700 mb-1">Belum ada pesan masuk</h3>
-                <p class="text-[11px] text-slate-400 leading-relaxed">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Script Koneksi Worker -->
     <script>
-        const WORKER_URL = "https://tmail-ku.h1m1t4dc.workers.dev";
-        
-        const prefixInput = document.getElementById("prefix");
-        const domainSelect = document.getElementById("domain");
-        const inboxList = document.getElementById("inbox-list");
-        const countSpan = document.getElementById("count");
-        const badgeCount = document.getElementById("badge-count");
-        const fullEmailLabel = document.getElementById("full-email-label");
-        const autoRefreshToggle = document.getElementById("auto-refresh-toggle");
+        // --- SESUAIKAN LINK WORKER KAMU DI SINI ---
+        const WORKER_URL = "https://tmail-ku.h1m1t4dc.workers.dev"; 
+        const DOMAIN = "preminmit.my.id";
 
-        function getFullEmail() {
-            const prefix = prefixInput.value.trim().toLowerCase() || "fast860";
-            return `${prefix}@${domainSelect.value}`;
+        let currentEmail = localStorage.getItem("tmail_current");
+
+        function generateNewEmail() {
+            const randomId = "user" + Math.floor(1000 + Math.random() * 9000);
+            currentEmail = `${randomId}@${DOMAIN}`;
+            localStorage.setItem("tmail_current", currentEmail);
+            document.getElementById("emailAddress").innerText = currentEmail;
+            clearInboxDataUI();
         }
 
-        function updateLabel() {
-            const email = getFullEmail();
-            fullEmailLabel.textContent = `Aktif: ${email}`;
-        }
-
-        function generateRandom() {
-            const rand = Math.floor(1000 + Math.random() * 9000);
-            prefixInput.value = "fast" + rand;
-            updateLabel();
-            fetchInbox();
+        if (!currentEmail) {
+            generateNewEmail();
+        } else {
+            document.getElementById("emailAddress").innerText = currentEmail;
         }
 
         function copyEmail() {
-            const email = getFullEmail();
-            navigator.clipboard.writeText(email);
-            alert("Berhasil menyalin email: " + email);
+            navigator.clipboard.writeText(currentEmail);
+            alert("Email berhasil disalin!");
         }
 
-        async function fetchInbox() {
-            const email = getFullEmail();
-            updateLabel();
+        function clearInboxDataUI() {
+            document.getElementById("inboxList").innerHTML = '<div class="empty-inbox">Belum ada pesan masuk...</div>';
+            document.getElementById("msgCount").innerText = "0 pesan";
+        }
+
+        async function fetchMessages() {
+            if (!currentEmail) return;
             try {
-                const res = await fetch(`${WORKER_URL}/api/get?email=${encodeURIComponent(email)}`);
+                const res = await fetch(`${WORKER_URL}/api/get?email=${encodeURIComponent(currentEmail)}`);
                 const data = await res.json();
                 
+                const listEl = document.getElementById("inboxList");
+                const countEl = document.getElementById("msgCount");
+
                 if (data.messages && data.messages.length > 0) {
-                    countSpan.textContent = data.messages.length + " pesan";
-                    badgeCount.textContent = data.messages.length;
-                    inboxList.innerHTML = data.messages.map(msg => `
-                        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-3.5 text-left shadow-sm">
-                            <div class="flex justify-between items-center mb-1.5">
-                                <span class="text-xs font-bold text-slate-700 truncate max-w-[180px]">${msg.from}</span>
-                                <span class="text-[10px] text-slate-400 font-medium">${new Date(msg.timestamp).toLocaleTimeString()}</span>
-                            </div>
-                            <div class="text-xs font-bold text-blue-600 mb-1.5">${msg.subject}</div>
-                            <div class="text-xs text-slate-600 bg-white p-2.5 rounded-xl border border-slate-100 whitespace-pre-wrap leading-relaxed">${msg.text}</div>
-                        </div>
-                    `).join('');
+                    countEl.innerText = `${data.messages.length} pesan`;
+                    listEl.innerHTML = "";
+                    data.messages.forEach(msg => {
+                        const item = document.createElement("div");
+                        item.className = "message-item";
+                        item.innerHTML = `
+                            <div class="message-sender">Dari: <b>${msg.from}</b></div>
+                            <div style="font-weight:bold; font-size:13px; margin-bottom:4px; color:#1d4ed8;">${msg.subject}</div>
+                            <div class="message-text">${msg.text}</div>
+                        `;
+                        listEl.appendChild(item);
+                    });
                 } else {
-                    countSpan.textContent = "0 pesan";
-                    badgeCount.textContent = "0";
-                    inboxList.innerHTML = `
-                        <div class="text-center py-10 px-4">
-                            <div class="w-14 h-14 bg-sky-50 text-blue-500 rounded-3xl flex items-center justify-center mx-auto mb-3 shadow-inner">
-                                <i class="fa-solid fa-envelope-open-text text-xl"></i>
-                            </div>
-                            <h3 class="text-sm font-bold text-slate-700 mb-1">Belum ada pesan masuk</h3>
-                            <p class="text-[11px] text-slate-400 leading-relaxed">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</p>
-                        </div>
-                    `;
+                    clearInboxDataUI();
                 }
             } catch (e) {
-                console.error("Gagal memuat inbox", e);
+                console.error("Gagal memuat pesan", e);
             }
         }
 
-        if (!prefixInput.value) {
-            prefixInput.value = "fast860";
-        }
-        updateLabel();
-
-        prefixInput.addEventListener("input", () => { updateLabel(); fetchInbox(); });
-        domainSelect.addEventListener("change", () => { updateLabel(); fetchInbox(); });
-
-        setInterval(() => {
-            if (autoRefreshToggle.checked) {
-                fetchInbox();
+        async function clearInbox() {
+            if (!confirm("Hapus semua pesan di inbox ini?")) return;
+            try {
+                await fetch(`${WORKER_URL}/api/clear?email=${encodeURIComponent(currentEmail)}`);
+                clearInboxDataUI();
+            } catch (e) {
+                alert("Gagal membersihkan inbox.");
             }
-        }, 3000);
+        }
 
-        fetchInbox();
+        // Auto-refresh tiap 3 detik
+        setInterval(fetchMessages, 3000);
+        fetchMessages();
     </script>
 </body>
 </html>
