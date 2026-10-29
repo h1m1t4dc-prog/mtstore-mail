@@ -10,7 +10,8 @@
     body { font-family: 'Plus Jakarta Sans', sans-serif; background: linear-gradient(135deg, #F0F7FF 0%, #E0F2FE 100%); color: #1E293B; }
     .cute-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); border: 1.5px solid rgba(186, 230, 253, 0.8); box-shadow: 0 12px 35px -6px rgba(56, 189, 248, 0.15); }
     .btn-cute-primary { background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%); box-shadow: 0 6px 16px -3px rgba(2, 132, 199, 0.35); }
-    .sub-box { background: #F8FAFC; border: 1px solid #E2E8F0; }
+    .sub-box { background: #F8FAFC; border: 1px solid #E2E8F0; cursor: pointer; }
+    .sub-box:active { transform: scale(0.97); }
   </style>
 </head>
 <body class="min-h-screen p-4 flex flex-col items-center justify-center pb-12">
@@ -44,7 +45,7 @@
       <!-- Input Custom Username & Domain Dropdown -->
       <div class="space-y-2">
         <div class="flex items-center gap-2 bg-sky-50/80 border border-sky-200/90 rounded-2xl p-2 shadow-inner">
-          <input type="text" id="userInput" value="00mwr2f" class="w-1/2 bg-transparent text-sm font-bold text-slate-700 outline-none px-2" oninput="updateEmailDisplay()">
+          <input type="text" id="userInput" value="cdbzdkf" class="w-1/2 bg-transparent text-sm font-bold text-slate-700 outline-none px-2" oninput="updateEmailDisplay()">
           <span class="text-sky-400 font-bold">@</span>
           <select id="domainSelect" class="w-1/2 bg-white border border-sky-200 rounded-xl text-xs font-bold text-sky-700 p-2.5 outline-none shadow-sm cursor-pointer" onchange="updateEmailDisplay()">
             <option value="preminmit.my.id">preminmit.my.id</option>
@@ -54,17 +55,17 @@
         </div>
 
         <div class="px-1 pt-0.5">
-          <span class="text-[10px] text-slate-400 font-medium">Aktif: <span id="activeEmail" class="font-bold text-sky-600">00mwr2f@preminmit.my.id</span></span>
+          <span class="text-[10px] text-slate-400 font-medium">Aktif: <span id="activeEmail" class="font-bold text-sky-600">cdbzdkf@preminmit.my.id</span></span>
         </div>
       </div>
 
       <!-- Info Status & Jumlah Pesan -->
       <div class="grid grid-cols-2 gap-3">
-        <div class="sub-box rounded-2xl p-3 shadow-sm">
+        <div class="sub-box rounded-2xl p-3 shadow-sm cursor-default">
           <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider block">Masa Aktif</span>
           <div class="text-xs font-extrabold text-slate-700 mt-0.5 flex items-center gap-1">Permanen <span class="text-sky-500">💙</span></div>
         </div>
-        <div class="sub-box rounded-2xl p-3 shadow-sm">
+        <div class="sub-box rounded-2xl p-3 shadow-sm cursor-default">
           <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider block">Kotak Masuk</span>
           <div class="text-xs font-extrabold text-slate-700 mt-0.5"><span id="msgCount" class="text-sky-600 font-extrabold">0</span> pesan</div>
         </div>
@@ -72,16 +73,16 @@
 
       <!-- Action Buttons Grid -->
       <div class="grid grid-cols-2 gap-2.5">
-        <button onclick="copyEmail()" class="btn-cute-primary text-white text-xs font-bold py-3 rounded-2xl hover:opacity-95 transition flex items-center justify-center gap-1.5 shadow-md">
+        <button type="button" onclick="copyEmail()" class="btn-cute-primary text-white text-xs font-bold py-3 rounded-2xl hover:opacity-95 transition flex items-center justify-center gap-1.5 shadow-md">
           📋 Salin Email
         </button>
-        <button onclick="generateRandom()" class="sub-box hover:bg-sky-50 text-sky-700 text-xs font-bold py-3 rounded-2xl transition shadow-sm border border-sky-200">
+        <button type="button" onclick="generateRandom()" class="sub-box hover:bg-sky-50 text-sky-700 text-xs font-bold py-3 rounded-2xl transition shadow-sm border border-sky-200">
           ✨ Buat Baru
         </button>
-        <button onclick="showQRCode()" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
+        <button type="button" onclick="showQRCode()" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
           📱 Kode QR
         </button>
-        <button onclick="fetchInbox()" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
+        <button type="button" onclick="fetchInbox()" class="sub-box hover:bg-slate-100 text-slate-600 text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-1">
           🔄 Refresh
         </button>
       </div>
@@ -125,7 +126,7 @@
         <img id="qrImg" src="" alt="QR Code" class="w-48 h-48 mx-auto rounded-lg">
       </div>
       <p id="qrEmailText" class="text-xs font-bold text-sky-600 break-all"></p>
-      <button onclick="closeQRCode()" class="w-full btn-cute-primary text-white text-xs font-bold py-2.5 rounded-xl">Tutup</button>
+      <button type="button" onclick="closeQRCode()" class="w-full btn-cute-primary text-white text-xs font-bold py-2.5 rounded-xl">Tutup</button>
     </div>
   </div>
 
@@ -138,7 +139,7 @@
     const inboxContainer = document.getElementById('inboxContainer');
 
     function getActiveEmail() {
-      return `${(userInput.value || 'mymail').trim().toLowerCase()}@${domainSelect.value}`;
+      return `${(userInput.value \vert{}\vert{} 'mymail').trim().toLowerCase()}@${domainSelect.value}`;
     }
 
     function updateEmailDisplay() {
@@ -161,25 +162,12 @@
     function showQRCode() {
       const email = getActiveEmail();
       document.getElementById('qrEmailText').textContent = email;
-      document.getElementById('qrImg').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(email)}`;
-      document.getElementById('qrModal').classList.remove('hidden');
-      document.getElementById('qrModal').classList.add('flex');
-    }
-
-    function closeQRCode() {
-      document.getElementById('qrModal').classList.remove('flex');
-      document.getElementById('qrModal').classList.add('hidden');
-    }
-
-    async function fetchInbox() {
-      const email = getActiveEmail();
-      try {
-        const response = await fetch(`https://odd-shape-7a2a.h1m1t4dc.workers.dev/api/get?email=${encodeURIComponent(email)}`);
+      document.getElementById('qrImg').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(email)}`; document.getElementById('qrModal').classList.remove('hidden'); document.getElementById('qrModal').classList.add('flex'); }  function closeQRCode() { document.getElementById('qrModal').classList.remove('flex'); document.getElementById('qrModal').classList.add('hidden'); }  async function fetchInbox() { const email = getActiveEmail(); try { const response = await fetch(`https://odd-shape-7a2a.h1m1t4dc.workers.dev/api/get?email=${encodeURIComponent(email)}`);
         if (!response.ok) return;
         const data = await response.json();
         renderMessages(data);
       } catch (e) {
-        // Silent error
+        console.error("Gagal ambil data", e);
       }
     }
 
@@ -209,22 +197,4 @@
               <span class="text-[10px] font-extrabold text-sky-600 bg-sky-50 px-2 py-0.5 rounded-md truncate max-w-[180px]">Dari: ${msg.from}</span>
               <span class="text-[10px] text-slate-400 font-medium">${msg.date}</span>
             </div>
-            <h4 class="text-xs font-extrabold text-slate-800">${msg.subject}</h4>
-            <p class="text-[11px] text-slate-600 bg-sky-50/50 p-2.5 rounded-xl border border-sky-100/60 whitespace-pre-line leading-relaxed">${msg.body}</p>
-          </div>
-        `;
-      });
-      inboxContainer.innerHTML = html;
-    }
-
-    setInterval(() => {
-      const toggle = document.getElementById('autoRefreshToggle');
-      if (toggle && toggle.checked) {
-        fetchInbox();
-      }
-    }, 5000);
-
-    updateEmailDisplay();
-  </script>
-</body>
-</html>
+            <h4 class="text-
