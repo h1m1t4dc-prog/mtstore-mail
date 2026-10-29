@@ -75,12 +75,12 @@
             margin-bottom: 12px;
         }
         .email-display {
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
             color: #0f172a;
             word-break: break-all;
             background: #fff;
-            padding: 10px 12px;
+            padding: 10px 10px;
             border: 1px solid #cbd5e1;
             border-radius: 10px;
             flex-grow: 1;
@@ -88,13 +88,14 @@
         select {
             background: #fff;
             border: 1px solid #cbd5e1;
-            padding: 10px 8px;
+            padding: 10px 4px;
             border-radius: 10px;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 600;
             color: #334155;
             outline: none;
             cursor: pointer;
+            max-width: 135px;
         }
         .btn-group {
             display: grid;
@@ -136,34 +137,56 @@
             justify-content: space-between;
             align-items: center;
         }
-        .message-item {
+        
+        /* Gaya Kotak SMS / Pesan Ringkas */
+        .sms-item {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 14px;
+            padding: 12px 14px;
             margin-bottom: 10px;
-            word-break: break-all;
-            overflow-wrap: break-word;
             box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
-        .message-sender {
+        .sms-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 11px;
             color: #64748b;
-            margin-bottom: 4px;
-            font-weight: 500;
         }
-        .message-subject {
-            font-weight: 700;
-            font-size: 13px;
-            margin-bottom: 6px;
-            color: #1d4ed8;
+        .sms-sender {
+            font-weight: 600;
+            color: #334155;
         }
-        .message-text {
+        .sms-body {
             font-size: 13px;
             color: #0f172a;
+            background: #f8fafc;
+            padding: 8px 10px;
+            border-radius: 8px;
+            border: 1px solid #f1f5f9;
+            word-break: break-all;
             white-space: pre-wrap;
-            line-height: 1.45;
         }
+        .copy-otp-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            align-self: flex-start;
+            box-shadow: none;
+        }
+        .copy-otp-btn:active {
+            background: #059669;
+        }
+
         .empty-inbox {
             text-align: center;
             color: #94a3b8;
@@ -188,8 +211,9 @@
             <div class="email-box-flex">
                 <div class="email-display" id="emailAddress">Memuat...</div>
                 <select id="domainSelect" onchange="changeDomain()">
-                    <!-- Tambahkan daftar domain kamu di sini -->
                     <option value="preminmit.my.id">preminmit.my.id</option>
+                    <option value="mtstorea.my.id">mtstorea.my.id</option>
+                    <option value="mtstore.web.id">mtstore.web.id</option>
                 </select>
             </div>
             <div class="btn-group">
@@ -204,7 +228,7 @@
         </div>
 
         <div class="inbox-header">
-            <span>Kotak Masuk</span>
+            <span>Pesan Masuk (SMS Style)</span>
             <span id="msgCount" style="font-size: 12px; color: #64748b; font-weight: normal;">0 pesan</span>
         </div>
 
@@ -214,7 +238,6 @@
     </div>
 
     <script>
-        // --- SESUAIKAN LINK WORKER KAMU DI SINI ---
         const WORKER_URL = "https://tmail-ku.h1m1t4dc.workers.dev"; 
 
         let currentEmail = localStorage.getItem("tmail_current");
@@ -245,15 +268,17 @@
         if (!currentEmail) {
             generateNewEmail();
         } else {
-            // Set dropdown sesuai domain yang tersimpan
             const savedDomain = currentEmail.split("@")[1];
             if (savedDomain) {
+                let found = false;
                 for (let i = 0; i < domainSelect.options.length; i++) {
                     if (domainSelect.options[i].value === savedDomain) {
                         domainSelect.selectedIndex = i;
+                        found = true;
                         break;
                     }
                 }
+                if (!found) generateNewEmail();
             }
             document.getElementById("emailAddress").innerText = currentEmail;
         }
@@ -261,6 +286,11 @@
         function copyEmail() {
             navigator.clipboard.writeText(currentEmail);
             alert("Email berhasil disalin!");
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text);
+            alert("Berhasil disalin: " + text);
         }
 
         function clearInboxDataUI() {
@@ -282,11 +312,14 @@
                     listEl.innerHTML = "";
                     data.messages.forEach(msg => {
                         const item = document.createElement("div");
-                        item.className = "message-item";
+                        item.className = "sms-item";
                         item.innerHTML = `
-                            <div class="message-sender">Dari: <b>${msg.from}</b></div>
-                            <div class="message-subject">${msg.subject}</div>
-                            <div class="message-text">${msg.text}</div>
+                            <div class="sms-top">
+                                <span class="sms-sender">Dari: <b>${msg.from}</b></span>
+                            </div>
+                            <div style="font-weight: bold; font-size: 13px; color: #1d4ed8;">${msg.subject}</div>
+                            <div class="sms-body">${msg.text}</div>
+                            <button class="copy-otp-btn" onclick="copyText(\`${msg.text.replace(/"/g, '&quot;')}\`)">Salin Pesan / OTP</button>
                         `;
                         listEl.appendChild(item);
                     });
@@ -308,7 +341,6 @@
             }
         }
 
-        // Auto-refresh tiap 3 detik
         setInterval(fetchMessages, 3000);
         fetchMessages();
     </script>
