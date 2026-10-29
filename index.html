@@ -42,29 +42,30 @@
             gap: 8px;
         }
         .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            width: 34px;
+            height: 34px;
+            background: #3b82f6;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 16px;
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+        }
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
         }
         .logo {
             font-weight: 800;
-            font-size: 18px;
-            color: #1e293b;
+            font-size: 17px;
+            color: #0f172a;
             letter-spacing: -0.5px;
         }
-        .domain-badge {
+        .sub-logo {
             font-size: 11px;
             color: #d97706;
-            background: #fef3c7;
-            padding: 4px 10px;
-            border-radius: 20px;
             font-weight: 700;
         }
         .status {
@@ -81,54 +82,90 @@
         .card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 16px;
+            border-radius: 18px;
             padding: 16px;
             margin-bottom: 12px;
         }
         .label {
             font-size: 11px;
             text-transform: uppercase;
-            color: #64748b;
-            font-weight: 700;
-            margin-bottom: 8px;
+            color: #334155;
+            font-weight: 800;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            letter-spacing: 0.5px;
         }
         .email-input-group {
             display: flex;
-            gap: 8px;
             align-items: center;
-            margin-bottom: 6px;
+            gap: 6px;
+            margin-bottom: 8px;
         }
         .prefix-box {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 800;
             color: #0f172a;
-            background: #fff;
-            padding: 12px 14px;
+            background: #ffffff;
+            padding: 12px 10px;
             border: 1.5px solid #cbd5e1;
             border-radius: 12px;
             flex-grow: 1;
-            word-break: break-all;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .at-symbol {
+            font-size: 15px;
+            font-weight: 700;
+            color: #2563eb;
         }
         select {
-            background: #fff;
+            background: #ffffff;
             border: 1.5px solid #cbd5e1;
-            padding: 12px 8px;
+            padding: 12px 6px;
             border-radius: 12px;
             font-size: 12px;
             font-weight: 700;
-            color: #2563eb;
+            color: #1e293b;
             outline: none;
             cursor: pointer;
-            max-width: 145px;
+            width: 145px;
+            flex-shrink: 0;
         }
         .info-active {
             font-size: 12px;
             color: #64748b;
             margin-bottom: 14px;
             font-weight: 500;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .stat-box {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 10px 12px;
+        }
+        .stat-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .stat-value {
+            font-size: 13px;
+            font-weight: 800;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
         .grid-4-btn {
             display: grid;
@@ -139,7 +176,7 @@
             background: #2563eb;
             color: white;
             border: none;
-            padding: 12px;
+            padding: 11px;
             border-radius: 12px;
             font-size: 13px;
             font-weight: 700;
@@ -173,8 +210,8 @@
         .auto-refresh-left {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 13px;
+            gap: 6px;
+            font-size: 12px;
             font-weight: 700;
             color: #166534;
         }
@@ -198,7 +235,7 @@
         .sms-item {
             background: #ffffff;
             border: 1.5px solid #e2e8f0;
-            border-radius: 14px;
+            border-radius: 16px;
             padding: 14px;
             margin-bottom: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
@@ -248,17 +285,18 @@
             color: #94a3b8;
             font-size: 13px;
             padding: 35px 20px;
-            background: #f8fafc;
-            border-radius: 16px;
+            background: #ffffff;
+            border-radius: 18px;
             border: 2px dashed #cbd5e1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
         .empty-icon {
-            font-size: 28px;
-            margin-bottom: 2px;
+            font-size: 32px;
+            margin-bottom: 4px;
         }
     </style>
 </head>
@@ -268,7 +306,10 @@
         <div class="header">
             <div class="logo-area">
                 <div class="logo-icon">💙</div>
-                <div class="logo">mtstore.mail</div>
+                <div class="logo-text-group">
+                    <div class="logo">mtstore.mail</div>
+                    <div class="sub-logo">✨ 3 Domain Aktif</div>
+                </div>
             </div>
             <div class="status">● LIVE</div>
         </div>
@@ -276,17 +317,31 @@
         <div class="card">
             <div class="label">
                 <span>💌 Alamat Inbox</span>
-                <span class="domain-badge">✨ 3 Domain Aktif</span>
+                <span style="cursor: pointer;" onclick="alert('Domain siap digunakan!')">Pilih Domain ⚙️</span>
             </div>
+
             <div class="email-input-group">
                 <div class="prefix-box" id="prefixDisplay">memuat...</div>
+                <div class="at-symbol">@</div>
                 <select id="domainSelect" onchange="changeDomain()">
                     <option value="preminmit.my.id">preminmit.my.id</option>
                     <option value="mtstorea.my.id">mtstorea.my.id</option>
                     <option value="mtstore.web.id">mtstore.web.id</option>
                 </select>
             </div>
+
             <div class="info-active">Aktif: <b id="fullEmailDisplay" style="color:#2563eb;">...</b></div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-label">Masa Aktif</div>
+                    <div class="stat-value">Permanen 💙</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Kotak Masuk</div>
+                    <div class="stat-value" id="msgCountStat">0 pesan</div>
+                </div>
+            </div>
             
             <div class="grid-4-btn">
                 <button onclick="copyEmail()">📋 Salin Email</button>
@@ -305,19 +360,19 @@
 
         <div class="inbox-header">
             <span>Pesan Masuk</span>
-            <span id="msgCount" style="font-size: 12px; color: #64748b; font-weight: normal;">0 pesan</span>
+            <span id="msgCount" style="font-size: 12px; color: #64748b; font-weight: normal;">0</span>
         </div>
 
         <div id="inboxList">
             <div class="empty-inbox">
                 <div class="empty-icon">📭</div>
-                <div style="font-weight:700; color:#334155;">Belum ada pesan masuk</div>
-                <div style="font-size:11px; color:#94a3b8;">OTP atau pesan baru akan muncul otomatis secara real-time di sini.</div>
+                <div style="font-weight:800; color:#1e293b; font-size: 14px;">Belum ada pesan masuk</div>
+                <div style="font-size:11px; color:#94a3b8; line-height: 1.4;">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</div>
             </div>
         </div>
         
-        <div style="margin-top: 12px;">
-            <button class="secondary" onclick="clearInbox()" style="width: 100%; color: #dc2626; border-color: #fecaca; background: #fff5f5;">🗑️ Bersihkan Inbox</button>
+        <div style="margin-top: 14px;">
+            <button class="secondary" onclick="clearInbox()" style="width: 100%; color: #dc2626; border-color: #fecaca; background: #fff5f5; font-weight: 700;">🗑️ Bersihkan Inbox</button>
         </div>
     </div>
 
@@ -392,11 +447,12 @@
             document.getElementById("inboxList").innerHTML = `
                 <div class="empty-inbox">
                     <div class="empty-icon">📭</div>
-                    <div style="font-weight:700; color:#334155;">Belum ada pesan masuk</div>
-                    <div style="font-size:11px; color:#94a3b8;">OTP atau pesan baru akan muncul otomatis secara real-time di sini.</div>
+                    <div style="font-weight:800; color:#1e293b; font-size: 14px;">Belum ada pesan masuk</div>
+                    <div style="font-size:11px; color:#94a3b8; line-height: 1.4;">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</div>
                 </div>
             `;
-            document.getElementById("msgCount").innerText = "0 pesan";
+            document.getElementById("msgCount").innerText = "0";
+            document.getElementById("msgCountStat").innerText = "0 pesan";
         }
 
         async function fetchMessages() {
@@ -407,9 +463,11 @@
                 
                 const listEl = document.getElementById("inboxList");
                 const countEl = document.getElementById("msgCount");
+                const countStatEl = document.getElementById("msgCountStat");
 
                 if (data.messages && data.messages.length > 0) {
-                    countEl.innerText = `${data.messages.length} pesan`;
+                    countEl.innerText = data.messages.length;
+                    countStatEl.innerText = `${data.messages.length} pesan`;
                     listEl.innerHTML = "";
                     data.messages.forEach(msg => {
                         const item = document.createElement("div");
@@ -418,7 +476,7 @@
                             <div class="sms-top">
                                 <span class="sms-sender">👤 Dari: <b>${msg.from}</b></span>
                             </div>
-                            <div style="font-weight: 700; font-size: 13px; color: #1d4ed8;">📌 ${msg.subject}</div>
+                            <div style="font-weight: 800; font-size: 13px; color: #1d4ed8;">📌 ${msg.subject}</div>
                             <div class="sms-body">${msg.text}</div>
                             <button class="copy-otp-btn" onclick="copyText(\`${msg.text.replace(/"/g, '&quot;')}\`)">📋 Salin Pesan / OTP</button>
                         `;
