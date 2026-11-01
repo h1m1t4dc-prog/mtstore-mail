@@ -1,9 +1,22 @@
 {
-  "updatedAt": 1793555642549,
+  "updatedAt": 1793555764723,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
   "products": [
+    {
+      "id": "custom-1793555764265",
+      "category": "design",
+      "brand": "alight motion",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "1tahun",
+      "price": 1000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "acc seller/acc buyer"
+    },
     {
       "id": "custom-1793555612929",
       "category": "streaming",
