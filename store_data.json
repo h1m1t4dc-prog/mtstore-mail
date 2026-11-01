@@ -1,35 +1,9 @@
 {
-  "updatedAt": 1793555368967,
+  "updatedAt": 1793555374851,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
   "products": [
-    {
-      "id": "custom-1793555316315",
-      "category": "design",
-      "brand": "capcut",
-      "brandClass": "brand-general",
-      "brandIcon": "fas fa-cube",
-      "name": "private",
-      "duration": "1bulan",
-      "price": 27000,
-      "stock": "Ready Stock",
-      "warranty": "Bergaransi",
-      "desc": "acc seller"
-    },
-    {
-      "id": "custom-1793555286671",
-      "category": "design",
-      "brand": "capcut",
-      "brandClass": "brand-general",
-      "brandIcon": "fas fa-cube",
-      "name": "private",
-      "duration": "1bulan",
-      "price": 27000,
-      "stock": "Ready Stock",
-      "warranty": "Bergaransi",
-      "desc": "acc seller"
-    },
     {
       "id": "custom-1793555258029",
       "category": "streaming",
