@@ -1,8 +1,22 @@
 {
-  "updatedAt": 1793530126035,
+  "updatedAt": 1793553771929,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
+  "storeStatusMode": "auto",
   "products": [
+    {
+      "id": "custom-1793553771460",
+      "category": "streaming",
+      "brand": "bstation",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing 1b",
+      "duration": "1 Bulan",
+      "price": 4500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "acc seller"
+    },
     {
       "id": "custom-1793530107109",
       "category": "streaming",
@@ -14,28 +28,9 @@
       "price": 2500,
       "stock": "Ready Stock",
       "orderType": "ready",
-      "desc": "nogar"
+      "desc": "nogar",
+      "warranty": "Bergaransi"
     }
   ],
-  "snkList": [
-    {
-      "id": "snk-umum",
-      "title": "S&K Umum Seluruh Aplikasi (Wajib Patuhi)",
-      "rules": [
-        "Full Garansi berlaku sesuai durasi paket selama pembeli mematuhi S&K spesifik aplikasi.",
-        "Dilarang keras mengubah email, password, PIN, atau pengaturan pembayaran di dalam akun.",
-        "Proses pembenahan / pergantian akun yang mengalami kendala membutuhkan estimasi waktu 1–3 hari kerja (1–3D).",
-        "Klaim garansi wajib menyertakan bukti screenshot kendala secara sopan melalui WhatsApp Admin."
-      ]
-    },
-    {
-      "id": "snk-streaming",
-      "title": "S&K Khusus Netflix, YouTube & Aplikasi Streaming",
-      "rules": [
-        "Akun Sharing wajib digunakan pada 1 perangkat dan hanya membuka profil milik sendiri.",
-        "Dilarang mengotak-atik, menghapus, atau mengganti PIN profil pengguna lain.",
-        "Untuk YouTube/Spotify Invite, pastikan akun email belum melanggar limit pindah family."
-      ]
-    }
-  ]
+  "snkList": []
 }
