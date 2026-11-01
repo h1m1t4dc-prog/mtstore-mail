@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793555374851,
+  "updatedAt": 1793555380757,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
@@ -26,19 +26,6 @@
       "name": "sharing",
       "duration": "7hari",
       "price": 3500,
-      "stock": "Ready Stock",
-      "warranty": "Bergaransi",
-      "desc": "acc seller"
-    },
-    {
-      "id": "custom-1793555218616",
-      "category": "streaming",
-      "brand": "capcut",
-      "brandClass": "brand-general",
-      "brandIcon": "fas fa-cube",
-      "name": "sharing",
-      "duration": "1tahun",
-      "price": 17000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "acc seller"
