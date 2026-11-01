@@ -1,9 +1,22 @@
 {
-  "updatedAt": 1793555168402,
+  "updatedAt": 1793555186751,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
   "products": [
+    {
+      "id": "custom-1793555186295",
+      "category": "streaming",
+      "brand": "bstation",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1tahun",
+      "price": 9000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "acc seller"
+    },
     {
       "id": "custom-1793555135532",
       "category": "streaming",
