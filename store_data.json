@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793554487051,
+  "updatedAt": 1793554535170,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "auto",
@@ -24,7 +24,7 @@
       "brandClass": "brand-general",
       "brandIcon": "fas fa-cube",
       "name": "crack",
-      "duration": "random",
+      "duration": "random dur",
       "price": 2500,
       "stock": "Ready Stock",
       "orderType": "ready",
