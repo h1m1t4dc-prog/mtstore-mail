@@ -1,8 +1,8 @@
 {
-  "updatedAt": 1793554228975,
+  "updatedAt": 1793554487051,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
-  "storeStatusMode": "slow",
+  "storeStatusMode": "auto",
   "products": [
     {
       "id": "custom-1793553771460",
@@ -23,12 +23,12 @@
       "brand": "netflix",
       "brandClass": "brand-general",
       "brandIcon": "fas fa-cube",
-      "name": "crack random dur",
-      "duration": "-",
+      "name": "crack",
+      "duration": "random",
       "price": 2500,
       "stock": "Ready Stock",
       "orderType": "ready",
-      "desc": "nogar",
+      "desc": "link",
       "warranty": "No Garansi"
     }
   ],
