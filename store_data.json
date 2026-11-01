@@ -1,9 +1,22 @@
 {
-  "updatedAt": 1793556043338,
+  "updatedAt": 1793556147452,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
   "products": [
+    {
+      "id": "custom-1793556146991",
+      "category": "streaming",
+      "brand": "youtube",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "1bulan",
+      "price": 10000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "acc seller,bebas pilih plan famhead/indplan"
+    },
     {
       "id": "custom-1793556036176",
       "category": "streaming",
