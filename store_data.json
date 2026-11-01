@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793555618990,
+  "updatedAt": 1793555642549,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
@@ -20,7 +20,7 @@
     {
       "id": "custom-1793555582159",
       "category": "streaming",
-      "brand": "batation",
+      "brand": "bstation",
       "brandClass": "brand-general",
       "brandIcon": "fas fa-cube",
       "name": "sharing",
