@@ -1,8 +1,22 @@
 {
-  "updatedAt": 1793555409840,
+  "updatedAt": 1793555427797,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
-  "products": [],
+  "products": [
+    {
+      "id": "custom-1793555427346",
+      "category": "design",
+      "brand": "capcut",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1bulan",
+      "price": 17000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "acc seller"
+    }
+  ],
   "snkList": []
 }
