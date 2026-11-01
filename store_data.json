@@ -1,9 +1,22 @@
 {
-  "updatedAt": 1793555771055,
+  "updatedAt": 1793556036662,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
   "products": [
+    {
+      "id": "custom-1793556036176",
+      "category": "streaming",
+      "brand": "youtube",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "1bulan",
+      "price": 2500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "acc buyer via invite email"
+    },
     {
       "id": "custom-1793555764265",
       "category": "design",
