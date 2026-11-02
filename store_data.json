@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636067182,
+  "updatedAt": 1793636114082,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -936,6 +936,19 @@
       "name": "sharing alldev",
       "duration": "1 Bulan",
       "price": 18500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636113390-888",
+      "category": "design",
+      "brand": "Meitu",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing vip",
+      "duration": "7 Hari",
+      "price": 3500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
