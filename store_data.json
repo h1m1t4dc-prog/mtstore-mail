@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635037413,
+  "updatedAt": 1793635062965,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -530,12 +530,12 @@
       "brand": "Wink",
       "brandClass": "brand-general",
       "brandIcon": "fas fa-cube",
-      "name": "Private",
+      "name": "Private andro",
       "duration": "7 Hari",
       "price": 4000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
-      "desc": "harga untuk android"
+      "desc": "akun penjual"
     },
     {
       "id": "custom-1793635036908-278",
@@ -546,6 +546,19 @@
       "name": "Private ios",
       "duration": "7 Hari",
       "price": 5000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635062468-240",
+      "category": "streaming",
+      "brand": "WeTV",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 4000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
