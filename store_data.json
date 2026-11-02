@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634538329,
+  "updatedAt": 1793634598797,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -341,6 +341,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun pembeli via invite email"
+    },
+    {
+      "id": "custom-1793634598302-678",
+      "category": "ai-edu",
+      "brand": "Gemini",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private",
+      "duration": "1 Bulan",
+      "price": 8000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "plan pro via invite email"
     }
   ],
   "snkList": []
