@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635220707,
+  "updatedAt": 1793635244799,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -650,6 +650,19 @@
       "name": "private",
       "duration": "Lifetime",
       "price": 2000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635244264-921",
+      "category": "streaming",
+      "brand": "Viki",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 7500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
