@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793633859460,
+  "updatedAt": 1793633892116,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -104,6 +104,19 @@
       "name": "sharing",
       "duration": "1 Tahun",
       "price": 9000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793633891625-393",
+      "category": "utility",
+      "brand": "CamScanner",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Tahun",
+      "price": 14500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
