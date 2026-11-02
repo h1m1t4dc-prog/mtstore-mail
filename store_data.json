@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636196519,
+  "updatedAt": 1793636275447,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1004,6 +1004,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636274910-837",
+      "category": "utility",
+      "brand": "MS365",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Famplan",
+      "duration": "1 Bulan",
+      "price": 4500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "via invite email"
     }
   ],
   "snkList": []
