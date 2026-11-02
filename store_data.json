@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636725671,
+  "updatedAt": 1793636749123,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1183,6 +1183,19 @@
       "name": "private",
       "duration": "1 Bulan",
       "price": 30000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636748226-424",
+      "category": "streaming",
+      "brand": "Prime",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "1 Bulan",
+      "price": 8000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
