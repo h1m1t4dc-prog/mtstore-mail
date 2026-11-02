@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634772395,
+  "updatedAt": 1793634797483,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -416,6 +416,19 @@
       "name": "Private",
       "duration": "7 Hari",
       "price": 3000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793634796984-515",
+      "category": "utility",
+      "brand": "Zoom",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private",
+      "duration": "14 hari",
+      "price": 6000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
