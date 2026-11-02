@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636574527,
+  "updatedAt": 1793636627072,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1133,6 +1133,19 @@
       "price": 8000,
       "stock": "Ready Stock",
       "warranty": "No Garansi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636626230-406",
+      "category": "design",
+      "brand": "Remini",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Tahun andro",
+      "price": 15000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
       "desc": "akun penjual"
     }
   ],
