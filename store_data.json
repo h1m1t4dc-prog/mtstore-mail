@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636292964,
+  "updatedAt": 1793636352426,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1027,6 +1027,19 @@
       "name": "famhead",
       "duration": "1 Bulan",
       "price": 8000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636351848-664",
+      "category": "streaming",
+      "brand": "Sushiroll",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 4000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
