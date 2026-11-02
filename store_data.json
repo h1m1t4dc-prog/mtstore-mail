@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634234802,
+  "updatedAt": 1793634262894,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -234,6 +234,19 @@
       "name": "sharing",
       "duration": "7 Hari",
       "price": 7000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793634262393-232",
+      "category": "ai-edu",
+      "brand": "ChatGPT",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "go sharing",
+      "duration": "1 Bulan",
+      "price": 9500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
