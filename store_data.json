@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634646584,
+  "updatedAt": 1793634692854,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -380,6 +380,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "plan pro via invite email"
+    },
+    {
+      "id": "custom-1793634692352-297",
+      "category": "utility",
+      "brand": "Getcontact",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "cek",
+      "duration": "-",
+      "price": 500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "send nomor yang mau di cek ke admin"
     }
   ],
   "snkList": []
