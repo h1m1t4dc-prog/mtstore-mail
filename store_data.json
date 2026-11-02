@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635204418,
+  "updatedAt": 1793635220707,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -636,6 +636,19 @@
       "brandIcon": "fas fa-cube",
       "name": "private",
       "duration": "1 Tahun",
+      "price": 2000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635212098-172",
+      "category": "streaming",
+      "brand": "Viu",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "Lifetime",
       "price": 2000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
