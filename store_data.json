@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635074838,
+  "updatedAt": 1793635106208,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -572,6 +572,19 @@
       "name": "Private",
       "duration": "1 Bulan",
       "price": 22000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635105668-961",
+      "category": "ai-edu",
+      "brand": "Wattpad",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 4500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
