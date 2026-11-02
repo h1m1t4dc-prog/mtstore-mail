@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636006752,
+  "updatedAt": 1793636051999,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -910,6 +910,19 @@
       "name": "sharing",
       "duration": "1 Tahun",
       "price": 12000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636051475-348",
+      "category": "streaming",
+      "brand": "Loklok",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing basic",
+      "duration": "1 Bulan",
+      "price": 16000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
