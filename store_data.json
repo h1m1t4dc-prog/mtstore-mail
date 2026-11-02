@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636713062,
+  "updatedAt": 1793636725671,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1170,6 +1170,19 @@
       "name": "sharing",
       "duration": "1 Bulan",
       "price": 7000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636724965-970",
+      "category": "ai-edu",
+      "brand": "Quillbot",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "1 Bulan",
+      "price": 30000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
