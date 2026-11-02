@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793633702094,
+  "updatedAt": 1793633754067,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -42,6 +42,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun pembeli via invit"
+    },
+    {
+      "id": "custom-1793633753589-241",
+      "category": "music",
+      "brand": "Appmus",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Indplan",
+      "duration": "1 Bulan",
+      "price": 5000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
     }
   ],
   "snkList": []
