@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636915271,
+  "updatedAt": 1793636929353,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1274,6 +1274,19 @@
       "name": "Sharing 1P1U",
       "duration": "1 Bulan",
       "price": 27000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636928691-628",
+      "category": "streaming",
+      "brand": "Netflix",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Sharing 1P2U",
+      "duration": "1 Bulan",
+      "price": 22000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
