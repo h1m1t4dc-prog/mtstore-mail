@@ -1,9 +1,22 @@
 {
-  "updatedAt": 1793630872051,
+  "updatedAt": 1793630893677,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "open",
   "products": [
+    {
+      "id": "custom-1793630893214",
+      "category": "streaming",
+      "brand": "disney+",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 22000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "sharing 3u"
+    },
     {
       "id": "custom-1793630871589",
       "category": "streaming",
