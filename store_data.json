@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634898395,
+  "updatedAt": 1793634918089,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -471,6 +471,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual bebas pilih plan (famhead/indplan)"
+    },
+    {
+      "id": "custom-1793634917587-723",
+      "category": "streaming",
+      "brand": "YouTube",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private",
+      "duration": "1 Bulan",
+      "price": 2000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "jaspay-bawa gmail trial sendiri bebas pilih plan"
     }
   ],
   "snkList": []
