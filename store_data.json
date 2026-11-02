@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636184997,
+  "updatedAt": 1793636196519,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -988,6 +988,19 @@
       "name": "private vip",
       "duration": "7 Hari",
       "price": 7000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636195792-986",
+      "category": "design",
+      "brand": "Meitu",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private vip+",
+      "duration": "7 Hari",
+      "price": 8000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
