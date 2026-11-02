@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635307726,
+  "updatedAt": 1793635323227,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -676,6 +676,19 @@
       "name": "sharing mobile",
       "duration": "1 Bulan",
       "price": 19500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635322725-524",
+      "category": "streaming",
+      "brand": "Vidio",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing alldev",
+      "duration": "1 Bulan",
+      "price": 22500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
