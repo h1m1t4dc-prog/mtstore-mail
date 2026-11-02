@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636929353,
+  "updatedAt": 1793636949199,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1290,6 +1290,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636948538-730",
+      "category": "streaming",
+      "brand": "Netflix",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Semi Private",
+      "duration": "1 Bulan",
+      "price": 32000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual bisa log 2 device"
     }
   ],
   "snkList": []
