@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634276727,
+  "updatedAt": 1793634313948,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -260,6 +260,19 @@
       "name": "plus sharing",
       "duration": "1 Bulan",
       "price": 25000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793634313432-239",
+      "category": "streaming",
+      "brand": "Catchplay+",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 4000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
