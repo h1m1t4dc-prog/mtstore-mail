@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635507004,
+  "updatedAt": 1793635524541,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -754,6 +754,19 @@
       "name": "sharing std",
       "duration": "1 Bulan",
       "price": 6500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635524020-513",
+      "category": "streaming",
+      "brand": "HBO",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing ultimate",
+      "duration": "1 Bulan",
+      "price": 10000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
