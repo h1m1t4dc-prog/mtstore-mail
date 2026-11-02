@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636443564,
+  "updatedAt": 1793636502185,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1082,6 +1082,19 @@
       "stock": "Ready Stock",
       "warranty": "No Garansi",
       "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636501400-659",
+      "category": "music",
+      "brand": "Spotify",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Indplan",
+      "duration": "1 Bulan",
+      "price": 16500,
+      "stock": "Ready Stock",
+      "warranty": "No Garansi",
+      "desc": "akun penjual/akun pembeli harga sama"
     }
   ],
   "snkList": []
