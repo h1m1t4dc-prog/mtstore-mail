@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636138718,
+  "updatedAt": 1793636184997,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -962,6 +962,32 @@
       "name": "sharing vip+",
       "duration": "7 Hari",
       "price": 4000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636160799-406",
+      "category": "design",
+      "brand": "Meitu",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing vip",
+      "duration": "1 Bulan",
+      "price": 16000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636184475-524",
+      "category": "design",
+      "brand": "Meitu",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private vip",
+      "duration": "7 Hari",
+      "price": 7000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
