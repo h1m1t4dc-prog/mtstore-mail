@@ -1,9 +1,22 @@
 {
-  "updatedAt": 1793556153613,
+  "updatedAt": 1793630830614,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "slow",
   "products": [
+    {
+      "id": "custom-1793630830146",
+      "category": "streaming",
+      "brand": "youtube",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "1 Bulan",
+      "price": 2000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "jaspay-bawa gmail trial sendiri"
+    },
     {
       "id": "custom-1793556146991",
       "category": "streaming",
