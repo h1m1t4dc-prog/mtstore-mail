@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635062965,
+  "updatedAt": 1793635074838,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -559,6 +559,19 @@
       "name": "sharing",
       "duration": "1 Bulan",
       "price": 4000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635074332-478",
+      "category": "streaming",
+      "brand": "WeTV",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private",
+      "duration": "1 Bulan",
+      "price": 22000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
