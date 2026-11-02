@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793633774244,
+  "updatedAt": 1793633825788,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -65,6 +65,19 @@
       "name": "famhead",
       "duration": "1 Bulan",
       "price": 5500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793633825300-765",
+      "category": "streaming",
+      "brand": "Bstation",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 4500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
