@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635816839,
+  "updatedAt": 1793636006752,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -897,6 +897,19 @@
       "name": "private prem",
       "duration": "1 Bulan",
       "price": 30500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636006175-994",
+      "category": "design",
+      "brand": "Lightroom",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Tahun",
+      "price": 12000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
