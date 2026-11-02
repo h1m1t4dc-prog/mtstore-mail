@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634488826,
+  "updatedAt": 1793634538329,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -328,6 +328,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual (plan super)"
+    },
+    {
+      "id": "custom-1793634537834-181",
+      "category": "ai-edu",
+      "brand": "Duolingo",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Famplan",
+      "duration": "1 Bulan",
+      "price": 2000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun pembeli via invite email"
     }
   ],
   "snkList": []
