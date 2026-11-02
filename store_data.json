@@ -1,9 +1,22 @@
 {
-  "updatedAt": 1793630900428,
+  "updatedAt": 1793630983565,
   "logoUrl": "",
   "announcementText": "Jaminan garansi penuh sesuai durasi langganan & S&K berlaku",
   "storeStatusMode": "open",
   "products": [
+    {
+      "id": "custom-1793630983101",
+      "category": "streaming",
+      "brand": "youku",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 4500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "acc seller"
+    },
     {
       "id": "custom-1793630893214",
       "category": "streaming",
