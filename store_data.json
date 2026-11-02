@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793633580802,
+  "updatedAt": 1793633702094,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -28,7 +28,20 @@
       "price": 1000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
-      "desc": "akun penjual"
+      "desc": "akun pembeli"
+    },
+    {
+      "id": "custom-1793633701580-110",
+      "category": "music",
+      "brand": "Appmus",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Famplan",
+      "duration": "1 Bulan",
+      "price": 1500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun pembeli via invit"
     }
   ],
   "snkList": []
