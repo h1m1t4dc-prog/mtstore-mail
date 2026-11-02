@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635018611,
+  "updatedAt": 1793635037413,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -536,6 +536,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "harga untuk android"
+    },
+    {
+      "id": "custom-1793635036908-278",
+      "category": "design",
+      "brand": "Wink",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private ios",
+      "duration": "7 Hari",
+      "price": 5000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
     }
   ],
   "snkList": []
