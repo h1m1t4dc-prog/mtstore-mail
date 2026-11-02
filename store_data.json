@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634313948,
+  "updatedAt": 1793634352197,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -273,6 +273,19 @@
       "name": "sharing",
       "duration": "1 Bulan",
       "price": 4000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793634351698-116",
+      "category": "design",
+      "brand": "Dazzcam",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "Lifetime",
+      "price": 13000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
