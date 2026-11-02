@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634692854,
+  "updatedAt": 1793634717481,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -393,6 +393,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "send nomor yang mau di cek ke admin"
+    },
+    {
+      "id": "custom-1793634716980-792",
+      "category": "utility",
+      "brand": "Getcontact",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private",
+      "duration": "1 Bulan",
+      "price": 7000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "nomor pembeli"
     }
   ],
   "snkList": []
