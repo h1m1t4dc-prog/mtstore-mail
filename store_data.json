@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635120118,
+  "updatedAt": 1793635148753,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -598,6 +598,19 @@
       "name": "sharing",
       "duration": "1 Tahun",
       "price": 9500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635148238-415",
+      "category": "design",
+      "brand": "VSCO",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Tahun",
+      "price": 12500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
