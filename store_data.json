@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634815994,
+  "updatedAt": 1793634851647,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -445,6 +445,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual renew 2x"
+    },
+    {
+      "id": "custom-1793634851134-757",
+      "category": "streaming",
+      "brand": "YouTube",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Famplan",
+      "duration": "1 Bulan",
+      "price": 2500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun pembeli via invite email"
     }
   ],
   "snkList": []
