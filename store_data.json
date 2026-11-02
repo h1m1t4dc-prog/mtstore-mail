@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636791182,
+  "updatedAt": 1793636840099,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1222,6 +1222,19 @@
       "name": "sharing",
       "duration": "1 Tahun",
       "price": 9000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636839422-850",
+      "category": "design",
+      "brand": "Picsart",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing gold pro",
+      "duration": "1 Bulan",
+      "price": 10500,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
