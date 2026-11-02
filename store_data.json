@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635663853,
+  "updatedAt": 1793635682954,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -832,6 +832,19 @@
       "name": "sharing",
       "duration": "1 Bulan",
       "price": 4000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635682423-410",
+      "category": "streaming",
+      "brand": "iQIYI",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "3 Bulan",
+      "price": 12000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
