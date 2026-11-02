@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636275447,
+  "updatedAt": 1793636292964,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1017,6 +1017,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "via invite email"
+    },
+    {
+      "id": "custom-1793636292358-702",
+      "category": "utility",
+      "brand": "MS365",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "famhead",
+      "duration": "1 Bulan",
+      "price": 8000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
     }
   ],
   "snkList": []
