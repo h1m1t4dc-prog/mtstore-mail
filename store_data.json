@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634198365,
+  "updatedAt": 1793634209967,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -195,6 +195,19 @@
       "name": "sharing",
       "duration": "1 Bulan",
       "price": 17000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793634209477-186",
+      "category": "design",
+      "brand": "CapCut",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "1 Bulan",
+      "price": 27000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
