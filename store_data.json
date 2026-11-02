@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636524763,
+  "updatedAt": 1793636565970,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1108,6 +1108,19 @@
       "stock": "Ready Stock",
       "warranty": "No Garansi",
       "desc": "akun penjual/akun pembeli harga sama"
+    },
+    {
+      "id": "custom-1793636565399-68",
+      "category": "ai-edu",
+      "brand": "Scribd",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 4000,
+      "stock": "Ready Stock",
+      "warranty": "No Garansi",
+      "desc": "akun penjual"
     }
   ],
   "snkList": []
