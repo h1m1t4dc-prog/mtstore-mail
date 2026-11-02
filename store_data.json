@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636352426,
+  "updatedAt": 1793636392695,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1040,6 +1040,19 @@
       "name": "sharing",
       "duration": "1 Bulan",
       "price": 4000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636391893-596",
+      "category": "streaming",
+      "brand": "Stremio",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 15000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
