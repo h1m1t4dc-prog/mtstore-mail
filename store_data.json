@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634058620,
+  "updatedAt": 1793634089119,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -156,6 +156,19 @@
       "name": "pro member",
       "duration": "3 Bulan",
       "price": 1500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "via invite akun pembeli"
+    },
+    {
+      "id": "custom-1793634088639-867",
+      "category": "design",
+      "brand": "Canva",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "lifetime",
+      "duration": "Lifetime",
+      "price": 5000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "via invite akun pembeli"
