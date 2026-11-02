@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636392695,
+  "updatedAt": 1793636429804,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1053,6 +1053,19 @@
       "name": "sharing",
       "duration": "1 Bulan",
       "price": 15000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636429074-688",
+      "category": "utility",
+      "brand": "Strava",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private",
+      "duration": "1 Bulan",
+      "price": 12000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
