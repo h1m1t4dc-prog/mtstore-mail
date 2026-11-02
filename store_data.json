@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634352197,
+  "updatedAt": 1793634368141,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -286,6 +286,19 @@
       "name": "sharing",
       "duration": "Lifetime",
       "price": 13000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793634367647-934",
+      "category": "streaming",
+      "brand": "Disney",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing 6u",
+      "duration": "1 Bulan",
+      "price": 22000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
