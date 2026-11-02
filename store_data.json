@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793633019378,
+  "updatedAt": 1793633580802,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -15,7 +15,20 @@
       "price": 1000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
-      "desc": "akun pembeli/akun penjual harga sama"
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793633580329-396",
+      "category": "design",
+      "brand": "Alight Motion",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private",
+      "duration": "1 Tahun",
+      "price": 1000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
     }
   ],
   "snkList": []
