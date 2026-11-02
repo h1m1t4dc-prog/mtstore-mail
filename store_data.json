@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793636627072,
+  "updatedAt": 1793636684491,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1093,7 +1093,7 @@
       "duration": "1 Bulan",
       "price": 16500,
       "stock": "Ready Stock",
-      "warranty": "No Garansi",
+      "warranty": "Bergaransi",
       "desc": "akun penjual/akun pembeli harga sama"
     },
     {
@@ -1106,7 +1106,7 @@
       "duration": "1 Bulan",
       "price": 18500,
       "stock": "Ready Stock",
-      "warranty": "No Garansi",
+      "warranty": "Bergaransi",
       "desc": "akun penjual/akun pembeli harga sama"
     },
     {
@@ -1119,7 +1119,7 @@
       "duration": "1 Bulan",
       "price": 4000,
       "stock": "Ready Stock",
-      "warranty": "No Garansi",
+      "warranty": "Bergaransi",
       "desc": "akun penjual"
     },
     {
@@ -1132,7 +1132,7 @@
       "duration": "1 Bulan",
       "price": 8000,
       "stock": "Ready Stock",
-      "warranty": "No Garansi",
+      "warranty": "Bergaransi",
       "desc": "akun penjual"
     },
     {
@@ -1144,6 +1144,19 @@
       "name": "sharing",
       "duration": "1 Tahun andro",
       "price": 15000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793636683826-508",
+      "category": "design",
+      "brand": "Remini",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "Private web",
+      "duration": "2 minggu",
+      "price": 7000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
