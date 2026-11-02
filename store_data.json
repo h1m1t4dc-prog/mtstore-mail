@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793635462166,
+  "updatedAt": 1793635474568,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -728,6 +728,19 @@
       "name": "sharing",
       "duration": "1 Bulan",
       "price": 7000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
+    },
+    {
+      "id": "custom-1793635469901-275",
+      "category": "ai-edu",
+      "brand": "Grammarly",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "private",
+      "duration": "1 Bulan",
+      "price": 23000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "akun penjual"
