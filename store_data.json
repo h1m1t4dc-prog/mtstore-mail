@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793634918089,
+  "updatedAt": 1793634950020,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -484,6 +484,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "jaspay-bawa gmail trial sendiri bebas pilih plan"
+    },
+    {
+      "id": "custom-1793634949503-657",
+      "category": "streaming",
+      "brand": "Youku",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing",
+      "duration": "1 Bulan",
+      "price": 4500,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": "akun penjual"
     }
   ],
   "snkList": []
