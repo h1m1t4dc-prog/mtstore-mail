@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>mtstore.mail - Lifetime Temporary Email</title>
+    <title>mtstore.mail - Temporary Email</title>
     <style>
         * {
             box-sizing: border-box;
@@ -167,12 +167,12 @@
             border: 1.5px solid #cbdcf0;
             border-radius: 13px;
             padding: 9px 24px 9px 11px;
-            font-size: 12.5px;
+            font-size: 13px;
             font-weight: 800;
             color: #1b4f72;
             outline: none;
             cursor: pointer;
-            max-width: 148px;
+            max-width: 152px;
         }
         .select-arrows {
             position: absolute;
@@ -188,28 +188,13 @@
             font-size: 12.5px;
             color: #64748b;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             padding: 0 2px;
             word-break: break-all;
         }
         .active-email-line b {
             color: #1b4f72;
             font-weight: 700;
-        }
-        .saved-history-box {
-            margin-bottom: 14px;
-        }
-        .saved-select {
-            width: 100%;
-            background: #f0f7fe;
-            border: 1.5px dashed #b6d8f8;
-            border-radius: 14px;
-            padding: 9px 12px;
-            font-size: 12px;
-            font-weight: 700;
-            color: #1b4f72;
-            outline: none;
-            cursor: pointer;
         }
         .stats-row {
             display: grid;
@@ -232,7 +217,7 @@
             letter-spacing: 0.3px;
         }
         .stat-val {
-            font-size: 14px;
+            font-size: 14.5px;
             font-weight: 800;
             color: #0f2d4a;
             display: flex;
@@ -245,4 +230,586 @@
             gap: 12px;
         }
         .btn {
-            
+            border-radius: 999px;
+            padding: 13px 14px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(180deg, #38a3f8 0%, #1780d6 100%);
+            color: #ffffff;
+            box-shadow: 0 6px 14px rgba(23, 128, 214, 0.28);
+        }
+        .btn-outline {
+            background: #f9fbfe;
+            color: #334155;
+            border: 1.5px solid #dce9f6;
+        }
+        .refresh-bar {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 20px;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 20px -5px rgba(26, 117, 210, 0.06);
+            border: 1.5px solid #ffffff;
+            margin-bottom: 20px;
+        }
+        .refresh-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0f2d4a;
+        }
+        .check-badge {
+            width: 22px;
+            height: 22px;
+            background: #2998f2;
+            color: #ffffff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 900;
+        }
+        .realtime-pill {
+            background: #f0f7fe;
+            border: 1px solid #d8eafc;
+            color: #1a75d2;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 7px 14px;
+            border-radius: 999px;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 0 4px;
+        }
+        .section-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .count-pill {
+            background: #e3effb;
+            color: #1b4f72;
+            font-size: 12.5px;
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 999px;
+        }
+        .empty-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 26px;
+            padding: 38px 24px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(26, 117, 210, 0.06);
+            border: 1.5px solid #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .mailbox-circle {
+            width: 68px;
+            height: 68px;
+            background: #f2f8fd;
+            border: 1.5px solid #dfeefb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 16px;
+        }
+        .empty-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f2d4a;
+            margin-bottom: 8px;
+        }
+        .empty-desc {
+            font-size: 13px;
+            color: #7c90a6;
+            line-height: 1.5;
+            max-width: 280px;
+            font-weight: 500;
+        }
+        .sms-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 22px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 8px 20px -5px rgba(26, 117, 210, 0.08);
+            border: 1.5px solid #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sms-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+        .sms-sender {
+            font-size: 12px;
+            font-weight: 800;
+            color: #1b4f72;
+            background: #f0f6fd;
+            padding: 4px 10px;
+            border-radius: 999px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 72%;
+        }
+        .sms-time {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+        .sms-subject {
+            font-size: 15px;
+            font-weight: 800;
+            color: #0f2d4a;
+            line-height: 1.35;
+        }
+        .otp-highlight-box {
+            background: #f2f8fd;
+            border: 1.5px dashed #90caf9;
+            border-radius: 14px;
+            padding: 12px 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .otp-code {
+            font-size: 24px;
+            font-weight: 900;
+            color: #1b4f72;
+            letter-spacing: 3px;
+        }
+        .copy-otp-pill {
+            background: linear-gradient(180deg, #38a3f8 0%, #1780d6 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 999px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(23, 128, 214, 0.25);
+        }
+        .sms-snippet {
+            font-size: 13px;
+            color: #334155;
+            background: #f9fbfe;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #edf4fb;
+            word-break: break-word;
+            white-space: pre-line;
+            line-height: 1.5;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+        .clear-btn-wrap {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .clear-link {
+            background: none;
+            border: none;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .modal-bg {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(3px);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-box {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px;
+            max-width: 320px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <div class="header">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+                <div class="logo-text-group">
+                    <div class="logo-title">mtstore.mail</div>
+                    <div class="logo-sub">✨ 3 Domain Aktif</div>
+                </div>
+            </div>
+            <div class="live-pill">
+                <span class="live-dot"></span> LIVE
+            </div>
+        </div>
+
+        <div class="main-card">
+            <div class="card-top-row">
+                <div class="inbox-label">💌 ALAMAT INBOX</div>
+                <div class="choose-domain-label" onclick="document.getElementById('domainSelect').focus()">Pilih Domain ⚙️</div>
+            </div>
+
+            <div class="email-capsule">
+                <input type="text" class="prefix-input" id="prefixInput" value="" spellcheck="false" autocomplete="off" oninput="onCustomPrefixInput()">
+                <div class="at-sign">@</div>
+                <div class="domain-select-wrapper">
+                    <select class="domain-select" id="domainSelect" onchange="changeDomain()">
+                        <option value="preminmit.my.id">preminmit.my.id</option>
+                        <option value="mtstorea.my.id">mtstorea.my.id</option>
+                        <option value="mtstore.web.id">mtstore.web.id</option>
+                    </select>
+                    <span class="select-arrows">↕</span>
+                </div>
+            </div>
+
+            <div class="active-email-line">
+                Aktif: <b id="fullEmailDisplay">memuat...</b>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-title">MASA AKTIF</div>
+                    <div class="stat-val">Permanen 💙</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">KOTAK MASUK</div>
+                    <div class="stat-val"><span id="statCountNum" style="color:#1b4f72;">0</span> pesan</div>
+                </div>
+            </div>
+
+            <div class="btn-grid">
+                <button class="btn btn-primary" onclick="copyEmail()">📋 Salin Email</button>
+                <button class="btn btn-outline" onclick="generateNewEmail()">✨ Buat Baru</button>
+                <button class="btn btn-outline" onclick="showQrModal()">📱 Kode QR</button>
+                <button class="btn btn-outline" onclick="fetchMessages()">🔄 Refresh</button>
+            </div>
+        </div>
+
+        <div class="refresh-bar">
+            <div class="refresh-left">
+                <span class="check-badge">✓</span>
+                <span>Auto Refresh <span id="countdownNum" class="refresh-sec" style="color:#1b4f72; font-weight:800;">5s</span></span>
+            </div>
+            <div class="realtime-pill">Realtime Ready ✨</div>
+        </div>
+
+        <div class="section-header">
+            <div class="section-title">PESAN MASUK</div>
+            <div class="count-pill" id="badgeCount">0</div>
+        </div>
+
+        <div id="inboxList">
+            <div class="empty-card">
+                <div class="mailbox-circle">📫</div>
+                <div class="empty-title">Belum ada pesan masuk</div>
+                <div class="empty-desc">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</div>
+            </div>
+        </div>
+
+        <div class="clear-btn-wrap" id="clearWrap" style="display:none;">
+            <button class="clear-link" onclick="clearInbox()">🗑️ Bersihkan riwayat pesan ini</button>
+        </div>
+    </div>
+
+    <div class="modal-bg" id="qrModal" onclick="closeQrModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <div style="font-weight:800; font-size:16px; margin-bottom:12px; color:#0f2d4a;">Kode QR Email</div>
+            <img id="qrImage" src="" alt="QR Code" style="width:180px; height:180px; border-radius:12px; border:1px solid #e2e8f0; margin-bottom:12px;">
+            <div id="qrEmailText" style="font-size:13px; font-weight:700; color:#1b4f72; word-break:break-all; margin-bottom:16px;"></div>
+            <button class="btn btn-primary" style="width:100%;" onclick="closeQrModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        const WORKER_URL = "https://tmail-ku.h1m1t4dc.workers.dev";
+        const domainSelect = document.getElementById("domainSelect");
+        const prefixInput = document.getElementById("prefixInput");
+
+        // Daftar suku kata nama lengkap yang sangat banyak agar kombinasi ribuan & tidak pernah kembar
+        const FIRST_NAMES = [
+            "nabila", "putri", "zahra", "aisyah", "amanda", "salsa", "nadia", "tiara", "syifa", "amelia",
+            "citra", "kirana", "intan", "aurel", "vania", "clara", "melisa", "karina", "mita", "keysha",
+            "natasya", "annisa", "berliana", "shafira", "alyssa", "davina", "felicia", "jasmine", " nayla", "raisa",
+            "rehan", "rizky", "dimas", "fajar", "bagas", "aditya", "farhan", "kevin", "alvin", "gilang",
+            "daffa", "raka", "bayu", "arya", "dika", "hafiz", "naufal", "zidan", "arkan", "bima",
+            "chandrika", "devano", "erlangga", "farrel", "galang", "haikal", "ikhsan", "jeremy", "kenzie", "luthfi"
+        ];
+
+        const MIDDLE_NAMES = [
+            "ayu", "dwi", "tri", "nur", "eka", "indah", "cahya", "bunga", "aura", "cantika",
+            "bagus", "adi", "satria", "angga", "putra", "pratama", "wijaya", "tirta", "jaya", "sukma",
+            "andra", "bintang", "chandra", "danu", "ezra", "fadhil", "genta", "hanif", "indra", "jovan"
+        ];
+
+        const LAST_NAMES = [
+            "maharani", "permata", "ramadhani", "kusuma", "wardhani", "anggraini", "rahmawati", "octavia",
+            "febriani", "novita", "azzahra", "salsabila", "setiawan", "nugraha", "maulana", "hidayat",
+            "kurniawan", "aditama", "ardiansyah", "saputra", "saputri", "lestari", "prasetyo", "santoso",
+            "wibowo", "firmansyah", "hermawan", "budiman", "gunawan", "permana", "syahputra", "pangestu"
+        ];
+
+        function generateHumanPrefix() {
+            let usedList = [];
+            try {
+                usedList = JSON.parse(localStorage.getItem("tmail_used_prefixes") || "[]");
+            } catch (e) {
+                usedList = [];
+            }
+
+            let candidate = "";
+            let attempts = 0;
+
+            do {
+                const f = FIRST_NAMES[Math.floor(Math.random() * FIRST_NAMES.length)].trim();
+                const m = MIDDLE_NAMES[Math.floor(Math.random() * MIDDLE_NAMES.length)].trim();
+                let l = LAST_NAMES[Math.floor(Math.random() * LAST_NAMES.length)].trim();
+
+                if (l === f || l === m) l = "maharani";
+
+                // Kadang 2 kata nama lengkap, kadang 3 kata nama lengkap
+                const useThreeWords = Math.random() > 0.45 && f !== m;
+                const fullName = useThreeWords ? `${f}${m}${l}` : `${f}${l}`;
+
+                // Angka unik kombinasi random + potongan milidetik waktu sekarang
+                const timeSeed = String(Date.now()).slice(-2);
+                const randNum = Math.floor(10 + Math.random() * 89);
+                candidate = `${fullName}${randNum}${timeSeed}`;
+                attempts++;
+            } while (usedList.includes(candidate) && attempts < 20);
+
+            usedList.push(candidate);
+            if (usedList.length > 200) usedList.shift();
+            try {
+                localStorage.setItem("tmail_used_prefixes", JSON.stringify(usedList));
+            } catch (e) {}
+
+            return candidate;
+        }
+
+        let currentEmail = localStorage.getItem("tmail_current_v8");
+
+        function updateUIEmail() {
+            if (!currentEmail) return;
+            const parts = currentEmail.split("@");
+            if (document.activeElement !== prefixInput) {
+                prefixInput.value = parts[0];
+            }
+            document.getElementById("fullEmailDisplay").innerText = currentEmail;
+        }
+
+        function renderEmptyInbox() {
+            document.getElementById("inboxList").innerHTML = `
+                <div class="empty-card">
+                    <div class="mailbox-circle">📫</div>
+                    <div class="empty-title">Belum ada pesan masuk</div>
+                    <div class="empty-desc">Pesan atau kode OTP baru akan muncul otomatis secara real-time di sini.</div>
+                </div>
+            `;
+            document.getElementById("badgeCount").innerText = "0";
+            document.getElementById("statCountNum").innerText = "0";
+            document.getElementById("clearWrap").style.display = "none";
+        }
+
+        async function generateNewEmail() {
+            const prefix = generateHumanPrefix();
+            const domain = domainSelect.value;
+            currentEmail = `${prefix}@${domain}`;
+            localStorage.setItem("tmail_current_v8", currentEmail);
+            prefixInput.value = prefix;
+            updateUIEmail();
+            renderEmptyInbox();
+            try {
+                await fetch(`${WORKER_URL}/api/clear?email=${encodeURIComponent(currentEmail)}`);
+            } catch (e) {}
+        }
+
+        function onCustomPrefixInput() {
+            const cleanPrefix = prefixInput.value.toLowerCase().replace(/[^a-z0-9._-]/g, "");
+            if (prefixInput.value !== cleanPrefix) {
+                prefixInput.value = cleanPrefix;
+            }
+            const finalPrefix = cleanPrefix || generateHumanPrefix();
+            const domain = domainSelect.value;
+            currentEmail = `${finalPrefix}@${domain}`;
+            localStorage.setItem("tmail_current_v8", currentEmail);
+            document.getElementById("fullEmailDisplay").innerText = currentEmail;
+            fetchMessages();
+        }
+
+        function changeDomain() {
+            const prefix = prefixInput.value.trim() || generateHumanPrefix();
+            const domain = domainSelect.value;
+            currentEmail = `${prefix}@${domain}`;
+            localStorage.setItem("tmail_current_v8", currentEmail);
+            updateUIEmail();
+            renderEmptyInbox();
+            fetchMessages();
+        }
+
+        if (!currentEmail || !currentEmail.includes("@")) {
+            generateNewEmail();
+        } else {
+            const savedDomain = currentEmail.split("@")[1];
+            let matched = false;
+            for (let i = 0; i < domainSelect.options.length; i++) {
+                if (domainSelect.options[i].value === savedDomain) {
+                    domainSelect.selectedIndex = i;
+                    matched = true;
+                    break;
+                }
+            }
+            if (!matched) {
+                currentEmail = `${currentEmail.split("@")[0]}@${domainSelect.value}`;
+                localStorage.setItem("tmail_current_v8", currentEmail);
+            }
+            updateUIEmail();
+        }
+
+        function copyEmail() {
+            navigator.clipboard.writeText(currentEmail);
+            alert("Alamat email disalin:\n" + currentEmail);
+        }
+
+        function copyOtpText(txt) {
+            navigator.clipboard.writeText(txt);
+            alert("OTP berhasil disalin: " + txt);
+        }
+
+        function showQrModal() {
+            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(currentEmail)}`;
+            document.getElementById("qrImage").src = qrUrl;
+            document.getElementById("qrEmailText").innerText = currentEmail;
+            document.getElementById("qrModal").style.display = "flex";
+        }
+
+        function closeQrModal() {
+            document.getElementById("qrModal").style.display = "none";
+        }
+
+        function parseOTP(subject, rawText) {
+            const searchTarget = (subject + " " + rawText);
+            const matches = searchTarget.match(/\b\d{4,8}\b/g);
+            if (!matches) return null;
+
+            const filtered = matches.filter(num => {
+                const n = parseInt(num, 10);
+                return !(num.length === 4 && n >= 2020 && n <= 2035);
+            });
+
+            const sixDigit = filtered.find(num => num.length === 6);
+            return sixDigit || filtered[0] || null;
+        }
+
+        async function fetchMessages() {
+            if (!currentEmail) return;
+            try {
+                const res = await fetch(`${WORKER_URL}/api/get?email=${encodeURIComponent(currentEmail)}&t=${Date.now()}`, {
+                    cache: "no-store"
+                });
+                const data = await res.json();
+                const listEl = document.getElementById("inboxList");
+
+                if (data.messages && data.messages.length > 0) {
+                    const total = data.messages.length;
+                    document.getElementById("badgeCount").innerText = total;
+                    document.getElementById("statCountNum").innerText = total;
+                    document.getElementById("clearWrap").style.display = "block";
+                    listEl.innerHTML = "";
+
+                    data.messages.forEach(msg => {
+                        const subject = msg.subject || "(Pesan Masuk)";
+                        const rawText = msg.text || "";
+                        const otp = parseOTP(subject, rawText);
+                        const timeStr = msg.timestamp ? new Date(msg.timestamp).toLocaleTimeString("id-ID", { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : "Baru saja";
+
+                        const card = document.createElement("div");
+                        card.className = "sms-card";
+                        card.innerHTML = `
+                            <div class="sms-header">
+                                <div class="sms-sender">✉️ ${msg.from || "Pengirim"}</div>
+                                <div class="sms-time">${timeStr}</div>
+                            </div>
+                            <div class="sms-subject">${subject}</div>
+                            ${otp ? `
+                            <div class="otp-highlight-box">
+                                <div>
+                                    <div style="font-size:10px; font-weight:800; color:#64748b; text-transform:uppercase;">KODE OTP TERDETEKSI</div>
+                                    <div class="otp-code">${otp}</div>
+                                </div>
+                                <button class="copy-otp-pill" onclick="copyOtpText('${otp}')">📋 Salin OTP</button>
+                            </div>
+                            ` : ''}
+                            <div class="sms-snippet">${rawText}</div>
+                        `;
+                        listEl.appendChild(card);
+                    });
+                } else {
+                    renderEmptyInbox();
+                }
+            } catch (e) {
+                console.error("Gagal memuat pesan:", e);
+            }
+        }
+
+        async function clearInbox() {
+            try {
+                await fetch(`${WORKER_URL}/api/clear?email=${encodeURIComponent(currentEmail)}`);
+                renderEmptyInbox();
+            } catch (e) {}
+        }
+
+        let timeLeft = 5;
+        const countdownEl = document.getElementById("countdownNum");
+
+        setInterval(() => {
+            timeLeft--;
+            if (timeLeft <= 0) {
+                fetchMessages();
+                timeLeft = 5;
+            }
+            countdownEl.innerText = timeLeft + "s";
+        }, 1000);
+
+        fetchMessages();
+    </script>
+</body>
+</html>
