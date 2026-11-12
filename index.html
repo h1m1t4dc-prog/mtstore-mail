@@ -68,7 +68,7 @@
         }
         .logo-sub {
             font-size: 12px;
-            color: #d97706; /* Warna oranye kuning lembut seperti di gambar */
+            color: #d97706;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -112,7 +112,7 @@
         .inbox-label {
             font-size: 12px;
             font-weight: 800;
-            color: #1b4f72; /* Biru tua elegan sesuai gambar */
+            color: #1b4f72;
             letter-spacing: 0.5px;
             display: flex;
             align-items: center;
@@ -387,21 +387,22 @@
             font-size: 15px;
             font-weight: 800;
             color: #0f2d4a;
+            line-height: 1.35;
         }
         .otp-highlight-box {
             background: #f2f8fd;
             border: 1.5px dashed #90caf9;
             border-radius: 14px;
-            padding: 10px 14px;
+            padding: 12px 14px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .otp-code {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 900;
             color: #1b4f72;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
         .copy-otp-pill {
             background: linear-gradient(180deg, #38a3f8 0%, #1780d6 100%);
@@ -415,14 +416,16 @@
             box-shadow: 0 4px 10px rgba(23, 128, 214, 0.25);
         }
         .sms-snippet {
-            font-size: 12px;
-            color: #64748b;
+            font-size: 13px;
+            color: #334155;
             background: #f9fbfe;
-            padding: 8px 10px;
-            border-radius: 10px;
+            padding: 12px;
+            border-radius: 12px;
             border: 1px solid #edf4fb;
             word-break: break-word;
-            max-height: 70px;
+            white-space: pre-line;
+            line-height: 1.5;
+            max-height: 220px;
             overflow-y: auto;
         }
         .clear-btn-wrap {
@@ -669,13 +672,19 @@
             document.getElementById("qrModal").style.display = "none";
         }
 
+        // Deteksi OTP pintar: abaikan angka tahun (2024-2030) dan prioritaskan 6 digit
         function parseOTP(subject, rawText) {
             const searchTarget = (subject + " " + rawText);
             const matches = searchTarget.match(/\b\d{4,8}\b/g);
-            if (matches && matches.length > 0) {
-                return matches[0];
-            }
-            return null;
+            if (!matches) return null;
+
+            const filtered = matches.filter(num => {
+                const n = parseInt(num, 10);
+                return !(num.length === 4 && n >= 2020 && n <= 2035);
+            });
+
+            const sixDigit = filtered.find(num => num.length === 6);
+            return sixDigit || filtered[0] || null;
         }
 
         async function fetchMessages() {
@@ -705,7 +714,6 @@
                         card.innerHTML = `
                             <div class="sms-header">
                                 <div class="sms-sender">✉️ ${msg.from || "Pengirim"}</div>
-                                .sms-time { color: #94a3b8; font-weight: 600; font-size: 11px; }
                                 <div class="sms-time">${timeStr}</div>
                             </div>
                             <div class="sms-subject">${subject}</div>
@@ -718,7 +726,7 @@
                                 <button class="copy-otp-pill" onclick="copyOtpText('${otp}')">📋 Salin OTP</button>
                             </div>
                             ` : ''}
-                            <div class="sms-snippet">${rawText.substring(0, 150)}...</div>
+                            <div class="sms-snippet">${rawText}</div>
                         `;
                         listEl.appendChild(card);
                     });
