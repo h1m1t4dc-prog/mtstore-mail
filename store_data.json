@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1794641104726,
+  "updatedAt": 1794641118336,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1352,6 +1352,19 @@
       "name": "link",
       "duration": "3 Hari",
       "price": 3000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": ""
+    },
+    {
+      "id": "custom-1794641117870-374",
+      "category": "streaming",
+      "brand": "Netflix",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "link",
+      "duration": "1 Hari",
+      "price": 1000,
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": ""
