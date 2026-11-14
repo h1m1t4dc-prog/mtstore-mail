@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1793842053001,
+  "updatedAt": 1794640997366,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1316,19 +1316,6 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "Akun pembeli"
-    },
-    {
-      "id": "custom-1793637027572-83",
-      "category": "streaming",
-      "brand": "Netflix",
-      "brandClass": "brand-general",
-      "brandIcon": "fas fa-cube",
-      "name": "crack",
-      "duration": "Random Dur",
-      "price": 2500,
-      "stock": "Ready Stock",
-      "warranty": "No Garansi",
-      "desc": "akun penjual (link)"
     }
   ],
   "snkList": []
