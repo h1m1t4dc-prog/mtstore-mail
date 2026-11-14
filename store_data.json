@@ -1,5 +1,5 @@
 {
-  "updatedAt": 1794640997366,
+  "updatedAt": 1794641074883,
   "logoUrl": "",
   "announcementText": "Official Digital Subscription Catalog",
   "storeStatusMode": "open",
@@ -1316,6 +1316,19 @@
       "stock": "Ready Stock",
       "warranty": "Bergaransi",
       "desc": "Akun pembeli"
+    },
+    {
+      "id": "custom-1794641074378-0",
+      "category": "streaming",
+      "brand": "Netflix",
+      "brandClass": "brand-general",
+      "brandIcon": "fas fa-cube",
+      "name": "sharing link",
+      "duration": "1 Bulan",
+      "price": 17000,
+      "stock": "Ready Stock",
+      "warranty": "Bergaransi",
+      "desc": ""
     }
   ],
   "snkList": []
